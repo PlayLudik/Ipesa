@@ -1,38 +1,39 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    head: {
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
-      title: 'Nuevo proyecto nuxt',
-      meta: [
-        { name: 'description', content: '' },
-      ],
-      script:[
-        { children: `` }
-      ],
-    }
-  },
+	app: {
+		head: {
+			charset: "utf-8",
+			viewport: "width=device-width, initial-scale=1",
+			title: "Home",
+			meta: [{ name: "description", content: "Ipesa" }],
+			script: [{ children: `` }],
+		},
+	},
 
-  ssr: false,
-  devtools: { enabled: true },
-  css: ["~/assets/css/main.styl"],
-  plugins:[],
-  
-  vite: {
-    define:{
-      global:{},
-    },
-  },
+	ssr: false,
+	devtools: { enabled: true },
+	css: ["~/assets/css/main.styl"],
+	plugins: [],
 
-  runtimeConfig: {
-    public: {
-      apiBaseUrl: ''
-      // apiBaseUrl: 'http://127.0.0.1:8000'
-    }
-  },
+	vite: {
+		define: {
+			global: {},
+		},
+	},
 
-  modules: ["@pinia/nuxt", 'floating-vue/nuxt', "@sentry/nuxt/module", '@nuxt/ui'],
-  sourcemap: { client: true },
-  compatibilityDate: '2024-08-08'
-})
+	runtimeConfig: {
+		public: {
+			apiBaseUrl: "",
+			// apiBaseUrl: 'http://127.0.0.1:8000'
+		},
+	},
+
+	modules: [
+		"@pinia/nuxt",
+		"floating-vue/nuxt",
+		"@sentry/nuxt/module",
+		"@nuxt/ui",
+	],
+	sourcemap: { client: true },
+	compatibilityDate: "2024-08-08",
+});
