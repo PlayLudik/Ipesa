@@ -28,9 +28,13 @@
 <script setup lang="ts">
 import 'animate.css';
 const productoStore = useProductosStore();
-const { setCategoria, fetchProductos } = productoStore;
+const { setCategoria } = productoStore;
+const router = useRouter()
 const categories = ['Excabación', 'Compactación', 'Energía', 'Minería', 'Soluciones Viales', 'Agrícola'];
 function seleccionarCategoria(categoria: string) {
     setCategoria(categoria)
+    if (router.currentRoute.value.name !== 'index') {
+        router.push({ name: 'home' }) // o { path: '/' }
+    }
 }
 </script>

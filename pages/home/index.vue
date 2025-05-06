@@ -82,6 +82,9 @@ watch(categoriaActual, async (nuevaCategoria) => {
         await productoStore.fetchProductos(nuevaCategoria);
         allProducts.value = productoStore.productos;
         loadMoreProducts();
+        nextTick(() => {
+            scrollContainer.value?.scrollTo({ top: 0, behavior: 'smooth' })
+        })
     }
 });
 </script>
