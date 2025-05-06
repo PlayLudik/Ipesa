@@ -1,0 +1,120 @@
+[
+	{
+		"id": 1,
+		"nombre": "Excavadora DEERE 320",
+		"descripcion": "Excavadora de gran potencia",
+		"categoria": "Excabación",
+		"especificaciones": {
+			"peso_operativo": "21,000 kg",
+			"potencia": "128 kW",
+			"capacidad_cuchara": "1.2 m³"
+		},
+		"imagenes": [
+			"/images/productos/1.excavadora.png",
+			"/images/productos/1.excavadora.png",
+			"/images/productos/1.excavadora.png",
+			"/images/productos/1.excavadora.png"
+		]
+	},
+	{
+		"id": 2,
+		"nombre": "Rodillo Vibratorio Compactador",
+		"descripcion": "Ideal para compactar tierra",
+		"categoria": "Compactación",
+		"especificaciones": {
+			"peso": "90 kg",
+			"fuerza_centrifuga": "18 kN",
+			"ancho_placa": "40 cm"
+		},
+		"imagenes": [
+			"/images/productos/1.compactador.png",
+			"/images/productos/1.compactador.png",
+			"/images/productos/1.compactador.png",
+			"/images/productos/1.compactador.png"
+		]
+	},
+	{
+		"id": 3,
+		"nombre": "APD35C-6 (28 kW)",
+		"descripcion": "Grupo Electrógeno",
+		"categoria": "Energía",
+		"especificaciones": {
+			"potencia_nominal": "28 kW",
+			"voltaje": "400 V",
+			"frecuencia": "50 Hz",
+			"tipo_motor": "Diesel",
+			"capacidad_tanque": "100 L",
+			"autonomia": "10 horas"
+		},
+		"imagenes": [
+			"/images/productos/1.electrogeno.png",
+			"/images/productos/1.electrogeno.png",
+			"/images/productos/1.electrogeno.png",
+			"/images/productos/1.electrogeno.png"
+		]
+	},
+	{
+		"id": 4,
+		"nombre": "220 SM 3.8",
+		"descripcion": "Minerador de superficie para extracción selectiva de materias primas",
+		"categoria": "Minería",
+		"especificaciones": {
+			"potencia_nominal": "798 HP (595 kW)",
+			"tipo_motor": "Cummins QSK19 – Diesel",
+			"capacidad_tanque_combustible": "1,000 L",
+			"ancho_de_corte": "2,200 mm",
+			"profundidad_de_corte": "0 – 300 mm",
+			"peso_operativo": "58,000 kg",
+			"sistema_de_orugas": "Orugas de caucho con tracción hidráulica",
+			"cabina": "Presurizada con aire acondicionado y asiento ergonómico"
+		},
+		"imagenes": [
+			"/images/productos/1.mineria.jpg",
+			"/images/productos/1.mineria.jpg",
+			"/images/productos/1.mineria.jpg",
+			"/images/productos/1.mineria.jpg"
+		]
+	},
+	{
+		"id": 5,
+		"nombre": "BA 4000",
+		"descripcion": "Planta mezcladora de asfalto continua de alto rendimiento",
+		"categoria": "Soluciones Viales",
+		"especificaciones": {
+			"capacidad_de_produccion": "320 – 400 t/h",
+			"tipo_de_combustible": "Diésel / Fuel oil",
+			"consumo_de_combustible": "19 – 25 L/h (dependiendo de la carga)",
+			"capacidad_mezcladora": "5,000 kg por ciclo",
+			"silos_de_almacenamiento": "Hasta 300 t",
+			"sistema_de_filtrado": "Filtro de mangas de alto rendimiento",
+			"control_automatizado": "Sistema de control PLC con interfaz táctil"
+		},
+		"imagenes": [
+			"/images/productos/1.solucion-vial.png",
+			"/images/productos/1.solucion-vial.png",
+			"/images/productos/1.solucion-vial.png",
+			"/images/productos/1.solucion-vial.png"
+		]
+	},
+	{
+		"id": 6,
+		"nombre": "5076EF",
+		"descripcion": "Tractor Especializado",
+		"categoria": "Agrícola",
+		"especificaciones": {
+			"capacidad_de_produccion": "320 – 400 t/h",
+			"tipo_de_combustible": "Diésel / Fuel oil",
+			"consumo_de_combustible": "19 – 25 L/h (dependiendo de la carga)",
+			"capacidad_mezcladora": "5,000 kg por ciclo",
+			"silos_de_almacenamiento": "Hasta 300 t",
+			"sistema_de_filtrado": "Filtro de mangas de alto rendimiento",
+			"control_automatizado": "Sistema de control PLC con interfaz táctil"
+		},
+		"imagenes": [
+			"/images/productos/1.agricola.png",
+			"/images/productos/1.agricola.png",
+			"/images/productos/1.agricola.png",
+			"/images/productos/1.agricola.png"
+		]
+	}
+]

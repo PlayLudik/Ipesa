@@ -13,6 +13,7 @@
     "@nuxt/ui": "^2.20.0",
     "@pinia/nuxt": "^0.5.3",
     "@sentry/nuxt": "^8.41.0",
+    "animate.css": "^4.1.1",
     "dotenv": "^16.4.5",
     "floating-vue": "^5.2.2",
     "nuxt": "^3.14.1592",

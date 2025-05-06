@@ -7,11 +7,15 @@ export default defineNuxtConfig({
 			title: "Home",
 			meta: [{ name: "description", content: "Ipesa" }],
 			script: [{ children: `` }],
+			link: [{ rel: "icon", type: "image/x-icon", href: "/ipesa-favicon.png" }],
 		},
 	},
 
 	ssr: false,
 	devtools: { enabled: true },
+	imports: {
+		dirs: ["stores"],
+	},
 	css: ["~/assets/css/main.styl"],
 	plugins: [],
 
