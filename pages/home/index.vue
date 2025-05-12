@@ -1,22 +1,22 @@
 <template>
     <div class="flex items-center justify-center h-screen bg-gray-100 text-black overflow-hidden">
         <!-- Main Content -->
-        <div ref="scrollContainer" class="flex-1 flex flex-col bg-gray-100 h-full p-4 overflow-y-auto"
+        <div ref="scrollContainer" class="flex-1 flex flex-col bg-gray-100 h-full md:p-4 p-0 overflow-y-auto"
             @scroll="handleScroll">
             <div class="flex items-center justify-between w-full">
-                <img src="@/assets/image/IPESA-LOGO.png" alt="logo" class="w-28 mb-6" />
-                <h3 class="text-xl font-semibold">{{ categoriaActual }}</h3>
+                <img src="@/assets/image/IPESA-LOGO.png" alt="logo" class="w-28 mb-6 md:flex hidden" />
+                <h3 class="md:text-xl text-2xl font-semibold md:mb-0 mb-4">{{ categoriaActual }}</h3>
             </div>
             <div class="grid grid-cols-12 gap-4">
                 <div v-for="(product, index) in displayedProducts" :key="index"
-                    class="col-span-3 cursor-pointer card-fade-up" @click="goToProduct(product.nombre)">
+                    class="lg:col-span-3 col-span-6 cursor-pointer card-fade-up" @click="goToProduct(product.nombre)">
                     <ProductCard :nombre="product.nombre" :categoria="product.categoria"
                         :imagen="product.imagenes[0]" />
                 </div>
             </div>
 
             <div v-if="loading" class="grid grid-cols-12 gap-4 mt-4">
-                <div v-for="n in 8" :key="'skeleton-' + n" class="col-span-3">
+                <div v-for="n in 8" :key="'skeleton-' + n" class="lg:col-span-3 col-span-6">
                     <CardSkeleton />
                 </div>
             </div>

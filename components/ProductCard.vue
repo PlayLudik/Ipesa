@@ -2,15 +2,15 @@
     <div
         class="w-full bg-white max-w-xs border border-gray-300 rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300 cursor-pointer">
         <!-- Skeleton o imagen -->
-        <div class="w-full h-32 bg-white relative">
+        <div class="w-full md:h-32 h-20 bg-white relative">
             <div v-if="!imageLoaded" class="absolute inset-0 shimmer bg-gray-300 rounded"></div>
             <img :src="imagen" alt="Imagen del producto"
                 class="w-full h-full object-contain transition-opacity duration-300"
                 :class="{ 'opacity-0': !imageLoaded }" @load="imageLoaded = true" />
         </div>
         <div class="p-4">
-            <p class="text-sm text-gray-500 mb-1">{{ categoria }}</p>
-            <p class="text-lg font-semibold text-gray-800">{{ nombre }}</p>
+            <p class="md:text-sm text-xs text-gray-500 mb-1">{{ categoria }}</p>
+            <p class="md:text-lg text-base font-semibold text-gray-800">{{ nombre }}</p>
         </div>
     </div>
 </template>

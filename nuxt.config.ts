@@ -12,6 +12,9 @@ export default defineNuxtConfig({
 	},
 
 	ssr: false,
+	nitro: {
+		preset: "static",
+	},
 	devtools: { enabled: true },
 	imports: {
 		dirs: ["stores"],

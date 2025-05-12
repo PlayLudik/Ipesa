@@ -12,13 +12,15 @@ export const useProductosStore = defineStore("productos", {
 	actions: {
 		async fetchProductos(categoria?: string) {
 			try {
-				const url = categoria
-					? `/api/listar-productos?categoria=${encodeURIComponent(categoria)}`
-					: "/api/listar-productos";
+				const data = await $fetch<Producto[]>("/productos.json");
 
-				const data = await $fetch<Producto[]>(url);
+				// Filtramos por categoría si se especifica
+				const filtrados = categoria
+					? data.filter((producto) => producto.categoria === categoria)
+					: data;
+
 				this.categoriaSeleccionada = categoria ?? "Excabación";
-				this.productos = data;
+				this.productos = filtrados;
 			} catch (error) {
 				console.error("Error al obtener productos:", error);
 			}

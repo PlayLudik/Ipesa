@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col h-full p-4">
+    <div class="flex flex-col h-full md:p-4 p-0">
         <div class="flex items-center justify-between bg-gray-100">
-            <h1 class="text-3xl text-black font-bold">{{ productName }}</h1>
+            <h1 class="md:text-3xl text-2xl text-black font-bold">{{ productName }}</h1>
             <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 cursor-pointer transition duration-200"
                 @click="handleClose">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" viewBox="0 0 20 20"
@@ -12,19 +12,19 @@
                 </svg>
             </div>
         </div>
-        <div class="flex gap-4 mt-4 p-4 w-full bg-white h-full">
-            <div class="w-1/2 flex flex-col">
+        <div class="flex flex-col md:flex-row gap-4 mt-4 p-4 w-full bg-white rounded-md">
+            <div class="md:w-1/2 w-full flex flex-col">
                 <!-- Imagen principal grande -->
-                <div class="overflow-hidden w-full relative h-96">
+                <div class="overflow-hidden w-full relative md:h-96 h-44">
                     <div v-if="!imagenesCargadas[0]"
                         class="w-full h-full bg-gray-200 shimmer absolute inset-0 card-fade-up z-0"></div>
                     <img v-if="producto?.imagenes?.[0]" :src="producto.imagenes[0]" alt="Imagen principal"
                         class="w-full h-full object-cover z-10 relative" @load="imagenesCargadas[0] = true" />
                 </div>
                 <!-- Miniaturas -->
-                <div class="grid grid-cols-3 gap-4 mt-4">
+                <div class="grid grid-cols-3 gap-3 mt-4">
                     <div v-for="(img, index) in producto?.imagenes?.slice(1, 4)" :key="index"
-                        class="relative h-24 w-full border border-gray-300 rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300 cursor-pointer">
+                        class="relative md:h-24 h-14 w-full border border-gray-300 rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300 cursor-pointer">
                         <div v-if="!imagenesCargadas[index + 1]"
                             class="absolute inset-0 bg-gray-300 shimmer card-fade-up z-0"></div>
                         <img :src="img" alt="Miniatura" class="w-full h-full object-cover z-10 relative"
@@ -57,6 +57,7 @@ definePageMeta({
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
+const router = useRouter();
 const productName = route.params.name as string;
 const productoStore = useProductosStore();
 
@@ -81,16 +82,18 @@ onMounted(async () => {
 watch(
     () => productoStore.productos,
     (nuevosProductos) => {
-        const encontrado = nuevosProductos.find(p => p.nombre === productName)
+        const encontrado = nuevosProductos.find(p => p.nombre === productName);
         if (encontrado) {
-            producto.value = encontrado
-        }
-        if (encontrado?.imagenes) {
-            imagenesCargadas.value = encontrado.imagenes.map(() => false)
+            producto.value = encontrado;
+            if (encontrado.imagenes) {
+                imagenesCargadas.value = encontrado.imagenes.map(() => false);
+            }
+        } else {
+            router.replace('/404'); // redirige si no se encuentra
         }
     },
     { immediate: true }
-)
+);
 
 </script>
 <style scoped>
