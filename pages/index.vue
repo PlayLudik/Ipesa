@@ -1,49 +1,73 @@
 <template>
   <div ref="containerRef" :class="containerClass"
-    class="flex flex-col items-center justify-center h-screen bg-gray-100">
-    <img v-if="showImage" ref="logoRef" :class="`w-2/5 animate__animated ${animationClass}`"
-      src="@/assets/image/IPESA-LOGO.png" alt="logo" @animationend="handleAnimationEnd" />
+    class="flex flex-col items-center justify-center h-screen bg-[#0F0F0F] overflow-hidden">
+    <!-- <img v-if="showImage" ref="logoRef" :class="`w-2/5 animate__animated ${animationClass}`"
+      src="@/assets/image/IPESA-LOGO-White.png" alt="logo" @animationend="handleAnimationEnd" /> -->
+    <div v-if="showImage" class="fixed inset-0 z-40">
+      <!-- Fondo negro inicial -->
+      <div class="absolute inset-0 bg-black transition-opacity duration-1000"
+        :class="fadeOutBlack ? 'opacity-0' : 'opacity-100'">
+      </div>
 
+      <!-- Imagen de fondo -->
+      <div
+        class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 bg-[url('@/assets/image/intro.png')]"
+        :class="{ 'opacity-100': showIntroImage, 'opacity-0': !showIntroImage }">
+      </div>
+
+      <!-- Logo -->
+      <img ref="logoRef"
+        :class="`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/5 animate__animated ${animationClass}`"
+        src="@/assets/image/IPESA-LOGO-White.png" alt="logo" @animationend="handleAnimationEnd" />
+    </div>
     <div v-else
-      class="text-center animate__animated animate__fadeIn flex items-center justify-center flex-col lg:flex-row">
-      <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 lg:w-3/6 w-full">
-        <div class="col-span-2 flex flex-col gap-4">
-          <div class="bg-black h-[230px] w-[230px] lg:ml-11 mx-auto animate__animated animate__fadeInUp"></div>
-          <div
-            class="w-full animate__animated animate__bounceIn animate__delay-1s lg:hidden flex justify-center items-center">
-            <img src="@/assets/image/IPESA-LOGO.png" alt="logo" class="w-56" />
-          </div>
-          <div class="h-[200px] border-r-2 border-black lg:flex hidden flex-col justify-center items-end">
-            <p ref="productLineRef" class="text-gray-700 font-medium text-xl mr-4 mb-24" :class="productLineClass"
-              @animationend="handleProductLineAnimationEnd">
-              Linea de Productos
-            </p>
-          </div>
-        </div>
-        <div class="col-span-2 overflow-hidden lg:flex hidden flex-col justify-between items-start">
-          <div class="flex items-end justify-start h-[230px] animate__animated animate__bounceIn animate__delay-1s">
-            <img src="@/assets/image/IPESA-LOGO.png" alt="logo" class="w-4/5" />
-          </div>
-          <div class="h-[200px] flex flex-col justify-center items-start gap-4 animate__animated animate__fadeInUp">
-            <h2 class="text-black font-bold text-3xl w-1/2">Construcción y Utilitarios</h2>
-          </div>
-        </div>
-        <div class="border-l-2 border-gray-500 flex lg:hidden justify-center flex-col mt-4 px-4 col-span-2">
-          <p ref="productLineRef" class="text-gray-700 font-medium text-base text-start" :class="productLineClass"
-            @animationend="handleProductLineAnimationEnd">
-            Linea de Productos
+      class="text-center bg-[url('@/assets/image/intro.png')] animate__animated animate__fadeIn flex items-center justify-center flex-col lg:flex-row w-full">
+      <div class="h-screen flex flex-col w-full relative">
+        <!-- Cuadro superior (izquierda) -->
+        <div
+          class="h-[45%] w-[80%] lg:w-[50%] lg:h-[30%] bg-[#F8CB32] self-start flex justify-end items-end px-4 animate__animated animate__fadeInDown">
+          <p ref="productLineRef" class="text-black font-semibold text-lg text-start mb-4 flex lg:hidden"
+            :class="productLineClass" @animationend="handleProductLineAnimationEnd">
+            Línea de Productos
           </p>
-          <h2 class="text-black font-bold text-start text-lg animate__animated animate__fadeInUp">
+        </div>
+
+        <!-- Logo centrado -->
+        <div class="h-[10%] lg:h-[40%] flex items-center justify-center w-full">
+          <img src="@/assets/image/IPESA-LOGO-White.png" alt="logo" class="w-36 lg:hidden flex" />
+          <div class="lg:flex justify-center items-stretch w-1/2 h-full hidden">
+            <!-- Contenedor para el texto alineado abajo -->
+            <div class="flex justify-end items-end w-1/2 p-6 animate__animated animate__fadeInLeftBig">
+              <p class="text-white font-semibold text-lg text-end mb-10" :class="productLineClass"
+                @animationend="handleProductLineAnimationEnd">Línea de Productos
+              </p>
+            </div>
+
+            <!-- Contenedor para el logo y el texto -->
+            <div class="flex flex-col  w-1/2 p-6 animate__animated animate__fadeInRightBig">
+              <img src="@/assets/image/IPESA-LOGO-White.png" alt="logo" class="w-64 mt-10" />
+              <h2 class="text-white font-bold mt-4 text-start text-lg">
+                Construcción y <br>Utilitarios
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cuadro inferior (derecha) -->
+        <div
+          class="h-[45%] w-[80%] lg:w-[50%] lg:h-[30%] bg-[#292929] self-end px-4 animate__animated animate__fadeInUp">
+          <h2 class="text-white font-bold mt-4 text-start text-lg flex lg:hidden">
             Construcción y <br>Utilitarios
           </h2>
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import 'animate.css';
 
 const animationStep = ref(0);
@@ -53,6 +77,8 @@ const productLineClass = ref('animate__animated animate__fadeInUp animate__delay
 const productLineStep = ref(0);
 const containerRef = ref<HTMLElement | null>(null);
 const containerClass = ref('animate__animated'); // Clase inicial del contenedor
+const fadeOutBlack = ref(false)
+const showIntroImage = ref(false)
 
 function handleAnimationEnd() {
   if (animationStep.value === 0) {
@@ -65,6 +91,18 @@ function handleAnimationEnd() {
     showImage.value = false;
   }
 }
+
+onMounted(() => {
+  // Empieza fade del negro
+  setTimeout(() => {
+    fadeOutBlack.value = true
+
+    // Luego de terminar el fade del negro, mostrar imagen
+    setTimeout(() => {
+      showIntroImage.value = true
+    }, 500) // duración del fade-out negro
+  }, 200) // leve retraso inicial para que se vea negro
+})
 
 function handleProductLineAnimationEnd() {
   if (productLineStep.value === 0) {
@@ -88,6 +126,7 @@ function handleProductLineAnimationEnd() {
     productLineStep.value++;
   }
 }
+
 </script>
 
 <style scoped></style>

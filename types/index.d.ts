@@ -12,6 +12,7 @@ declare global {
 		categoria: string;
 		especificaciones: EspecificacionesGenerales;
 		imagenes: string[];
+		pdfUrl: string;
 	}
 
 	export interface ProductoCreado extends Omit<Producto, "id"> {} // Si el ID se genera automáticamente

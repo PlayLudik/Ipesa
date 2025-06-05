@@ -1,16 +1,18 @@
 <template>
     <div
-        class="w-full bg-white max-w-xs border border-gray-300 rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300 cursor-pointer">
-        <!-- Skeleton o imagen -->
-        <div class="w-full md:h-32 h-20 bg-white relative">
-            <div v-if="!imageLoaded" class="absolute inset-0 shimmer bg-gray-300 rounded"></div>
-            <img :src="imagen" alt="Imagen del producto"
-                class="w-full h-full object-contain transition-opacity duration-300"
-                :class="{ 'opacity-0': !imageLoaded }" @load="imageLoaded = true" />
+        class="w-full bg-transparent max-w-xs overflow-hidden shadow hover:shadow-md transition duration-300 cursor-pointer">
+        <!-- Skeleton shimmer mientras carga -->
+        <div class="w-full md:h-44 h-20 relative">
+            <div v-if="!imageLoaded" class="absolute inset-0 shimmer bg-[#1A1A1A] rounded"></div>
+
+            <img :src="imagen" alt="Imagen del producto" loading="lazy" @load="imageLoaded = true"
+                class="w-full h-full object-contain transition-opacity duration-700 ease-in-out"
+                :class="imageLoaded ? 'opacity-100 delay-100' : 'opacity-0'" />
         </div>
+
         <div class="p-4">
-            <p class="md:text-sm text-xs text-gray-500 mb-1">{{ categoria }}</p>
-            <p class="md:text-lg text-base font-semibold text-gray-800">{{ nombre }}</p>
+            <p class="md:text-lg text-base font-bold text-white text-center">{{ nombre }}</p>
+            <p class="md:text-sm font-medium text-xs text-[rgba(255,255,255,0.40)] mb-1 text-center">{{ categoria }}</p>
         </div>
     </div>
 </template>
@@ -29,18 +31,13 @@ const imageLoaded = ref(false);
 
 <style scoped>
 .shimmer {
-    background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(255, 255, 255, 0.12) 50%,
+            rgba(255, 255, 255, 0.05) 100%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-
-    100% {
-        background-position: 200% 0;
-    }
+    border-radius: 0.5rem;
+    backdrop-filter: blur(1px);
 }
 </style>

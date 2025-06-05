@@ -1,120 +1,632 @@
 [
 	{
 		"id": 1,
-		"nombre": "Excavadora DEERE 320",
-		"descripcion": "Excavadora de gran potencia",
-		"categoria": "Excabación",
+		"nombre": "310P T2",
+		"descripcion": "Retroexcavadora de gran potencia",
+		"categoria": "Retroexcavadora",
 		"especificaciones": {
-			"peso_operativo": "21,000 kg",
-			"potencia": "128 kW",
-			"capacidad_cuchara": "1.2 m³"
+			"potencia_neta_del_motor": "69 kW (91 hp) a 1,800 rpm",
+			"produndidad_máxima_de_excavación": "4.27 m (14 ft. 0 in.)",
+			"peso_operativo": "7357 kg (16,219 lb.)"
 		},
 		"imagenes": [
-			"/images/productos/1.excavadora.png",
-			"/images/productos/1.excavadora.png",
-			"/images/productos/1.excavadora.png",
-			"/images/productos/1.excavadora.png"
-		]
+			"/images/productos/retroexcavadora/310L.png",
+			"/images/productos/retroexcavadora/310L.png",
+			"/images/productos/retroexcavadora/310L.png",
+			"/images/productos/retroexcavadora/310L.png"
+		],
+		"pdfUrl": "/pdfs/Retroexcavadora/FICHA TÉCNICA - 310P_compressed.pdf"
 	},
 	{
 		"id": 2,
-		"nombre": "Rodillo Vibratorio Compactador",
-		"descripcion": "Ideal para compactar tierra",
-		"categoria": "Compactación",
+		"nombre": "310P T3",
+		"descripcion": "Retroexcavadora de gran potencia",
+		"categoria": "Retroexcavadora",
+		"especificaciones": {
+			"potencia_neta_del_motor": "69 kW (91 hp) a 1,800 rpm",
+			"produndidad_máxima_de_excavación": "4.27 m (14 ft. 0 in.)",
+			"peso_operativo": "7357 kg (16,219 lb.)"
+		},
+		"imagenes": [
+			"/images/productos/retroexcavadora/310L.png",
+			"/images/productos/retroexcavadora/310L.png",
+			"/images/productos/retroexcavadora/310L.png",
+			"/images/productos/retroexcavadora/310L.png"
+		],
+		"pdfUrl": "/pdfs/Retroexcavadora/FICHA TÉCNICA - 310P_compressed.pdf"
+	},
+	{
+		"id": 3,
+		"nombre": "320P T2",
+		"descripcion": "Retroexcavadora de gran potencia",
+		"categoria": "Retroexcavadora",
 		"especificaciones": {
 			"peso": "90 kg",
 			"fuerza_centrifuga": "18 kN",
 			"ancho_placa": "40 cm"
 		},
 		"imagenes": [
-			"/images/productos/1.compactador.png",
-			"/images/productos/1.compactador.png",
-			"/images/productos/1.compactador.png",
-			"/images/productos/1.compactador.png"
-		]
-	},
-	{
-		"id": 3,
-		"nombre": "APD35C-6 (28 kW)",
-		"descripcion": "Grupo Electrógeno",
-		"categoria": "Energía",
-		"especificaciones": {
-			"potencia_nominal": "28 kW",
-			"voltaje": "400 V",
-			"frecuencia": "50 Hz",
-			"tipo_motor": "Diesel",
-			"capacidad_tanque": "100 L",
-			"autonomia": "10 horas"
-		},
-		"imagenes": [
-			"/images/productos/1.electrogeno.png",
-			"/images/productos/1.electrogeno.png",
-			"/images/productos/1.electrogeno.png",
-			"/images/productos/1.electrogeno.png"
-		]
+			"/images/productos/retroexcavadora/320p.png",
+			"/images/productos/retroexcavadora/320p.png",
+			"/images/productos/retroexcavadora/320p.png",
+			"/images/productos/retroexcavadora/320p.png"
+		],
+		"pdfUrl": "/pdfs/Retroexcavadora/FICHA TÉCNICA - 320P_compressed.pdf"
 	},
 	{
 		"id": 4,
-		"nombre": "220 SM 3.8",
-		"descripcion": "Minerador de superficie para extracción selectiva de materias primas",
-		"categoria": "Minería",
+		"nombre": "320P T3",
+		"descripcion": "Retroexcavadora de gran potencia",
+		"categoria": "Retroexcavadora",
 		"especificaciones": {
-			"potencia_nominal": "798 HP (595 kW)",
-			"tipo_motor": "Cummins QSK19 – Diesel",
-			"capacidad_tanque_combustible": "1,000 L",
-			"ancho_de_corte": "2,200 mm",
-			"profundidad_de_corte": "0 – 300 mm",
-			"peso_operativo": "58,000 kg",
-			"sistema_de_orugas": "Orugas de caucho con tracción hidráulica",
-			"cabina": "Presurizada con aire acondicionado y asiento ergonómico"
+			"peso": "90 kg",
+			"fuerza_centrifuga": "18 kN",
+			"ancho_placa": "40 cm"
 		},
 		"imagenes": [
-			"/images/productos/1.mineria.jpg",
-			"/images/productos/1.mineria.jpg",
-			"/images/productos/1.mineria.jpg",
-			"/images/productos/1.mineria.jpg"
-		]
+			"/images/productos/retroexcavadora/320p.png",
+			"/images/productos/retroexcavadora/320p.png",
+			"/images/productos/retroexcavadora/320p.png",
+			"/images/productos/retroexcavadora/320p.png"
+		],
+		"pdfUrl": "/pdfs/Retroexcavadora/FICHA TÉCNICA - 320P_compressed.pdf"
 	},
 	{
 		"id": 5,
-		"nombre": "BA 4000",
-		"descripcion": "Planta mezcladora de asfalto continua de alto rendimiento",
-		"categoria": "Soluciones Viales",
+		"nombre": "130P",
+		"descripcion": "Excavadores para construcción",
+		"categoria": "Excavadora",
 		"especificaciones": {
-			"capacidad_de_produccion": "320 – 400 t/h",
-			"tipo_de_combustible": "Diésel / Fuel oil",
-			"consumo_de_combustible": "19 – 25 L/h (dependiendo de la carga)",
-			"capacidad_mezcladora": "5,000 kg por ciclo",
-			"silos_de_almacenamiento": "Hasta 300 t",
-			"sistema_de_filtrado": "Filtro de mangas de alto rendimiento",
-			"control_automatizado": "Sistema de control PLC con interfaz táctil"
+			"potencia_neta": "69 kW (93 hp)",
+			"profundidad_de_excavación_máxima": "5.57 m (18 ft 3 in)",
+			"peso_operativo": "13 539-13 984 kg (29 822-30 802 lb)"
 		},
 		"imagenes": [
-			"/images/productos/1.solucion-vial.png",
-			"/images/productos/1.solucion-vial.png",
-			"/images/productos/1.solucion-vial.png",
-			"/images/productos/1.solucion-vial.png"
-		]
+			"/images/productos/excavadora/130P.png",
+			"/images/productos/excavadora/130P.png",
+			"/images/productos/excavadora/130P.png",
+			"/images/productos/excavadora/130P.png"
+		],
+		"pdfUrl": ""
 	},
 	{
 		"id": 6,
-		"nombre": "5076EF",
-		"descripcion": "Tractor Especializado",
-		"categoria": "Agrícola",
+		"nombre": "160P",
+		"descripcion": "Excavadores para construcción",
+		"categoria": "Excavadora",
 		"especificaciones": {
-			"capacidad_de_produccion": "320 – 400 t/h",
-			"tipo_de_combustible": "Diésel / Fuel oil",
-			"consumo_de_combustible": "19 – 25 L/h (dependiendo de la carga)",
-			"capacidad_mezcladora": "5,000 kg por ciclo",
-			"silos_de_almacenamiento": "Hasta 300 t",
-			"sistema_de_filtrado": "Filtro de mangas de alto rendimiento",
-			"control_automatizado": "Sistema de control PLC con interfaz táctil"
+			"potencia_neta": "90 kW (121 hp)",
+			"profundidad_de_excavación_máxima": "5.98 m (19 ft 7 in)",
+			"peso_de_funcionamiento": "17 717 kg (39 024 lb)"
 		},
 		"imagenes": [
-			"/images/productos/1.agricola.png",
-			"/images/productos/1.agricola.png",
-			"/images/productos/1.agricola.png",
-			"/images/productos/1.agricola.png"
-		]
+			"/images/productos/excavadora/160P.png",
+			"/images/productos/excavadora/160P.png",
+			"/images/productos/excavadora/160P.png",
+			"/images/productos/excavadora/160P.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 7,
+		"nombre": "200G",
+		"descripcion": "Excavadores para construcción",
+		"categoria": "Excavadora",
+		"especificaciones": {
+			"potencia_neta": "95 kw (130 hp)",
+			"profundidad_de_excavación_máxima": "6.57 m (21 ft 7 in)",
+			"peso_de_funcionamiento": "19 735 kg (43 469 lb)"
+		},
+		"imagenes": [
+			"/images/productos/excavadora/200G.png",
+			"/images/productos/excavadora/200G.png",
+			"/images/productos/excavadora/200G.png",
+			"/images/productos/excavadora/200G.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 8,
+		"nombre": "210P",
+		"descripcion": "Excavadores para construcción",
+		"categoria": "Excavadora",
+		"especificaciones": {
+			"potencia_neta": "119 kW (159 hp)",
+			"profundidad_de_excavación_máxima": "6,67 m (21 ft 11 in)",
+			"peso_de_funcionamiento": "23 560 kg (51 940 lb)"
+		},
+		"imagenes": [
+			"/images/productos/excavadora/210P.png",
+			"/images/productos/excavadora/210P.png",
+			"/images/productos/excavadora/210P.png",
+			"/images/productos/excavadora/210P.png"
+		],
+		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 210P_compressed.pdf"
+	},
+	{
+		"id": 8,
+		"nombre": "250P",
+		"descripcion": "Excavadores para construcción",
+		"categoria": "Excavadora",
+		"especificaciones": {
+			"potencia_neta": "140 kW (188 hp)",
+			"profundidad_de_excavación_máxima": "7,61 m (25 ft 0 in)",
+			"peso_de_funcionamiento": "27 500 kg (60 600 lb)"
+		},
+		"imagenes": [
+			"/images/productos/excavadora/250P.png",
+			"/images/productos/excavadora/250P.png",
+			"/images/productos/excavadora/250P.png",
+			"/images/productos/excavadora/250P.png"
+		],
+		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 250P.pdf"
+	},
+	{
+		"id": 9,
+		"nombre": "350P",
+		"descripcion": "Excavadores para construcción",
+		"categoria": "Excavadora",
+		"especificaciones": {
+			"potencia_neta": "202 kW (271 hp)",
+			"profundidad_de_excavación_máxima": "8,18 m (26 ft 10 in)",
+			"peso_de_funcionamiento": "36 734 kg (80 985 lb)"
+		},
+		"imagenes": [
+			"/images/productos/excavadora/350P.png",
+			"/images/productos/excavadora/350P.png",
+			"/images/productos/excavadora/350P.png",
+			"/images/productos/excavadora/350P.png"
+		],
+		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 350 P_compressed.pdf"
+	},
+	{
+		"id": 10,
+		"nombre": "470G LC",
+		"descripcion": "Excavadores para minería",
+		"categoria": "Excavadora",
+		"especificaciones": {
+			"potencia_neta": "257 kW (345 hp)",
+			"profundidad_máx_de_excavación": "6,32 m (20 ft. 9 in.)",
+			"peso_operativo": "51 218 kg (112,916 lb.)"
+		},
+		"imagenes": [
+			"/images/productos/excavadora/470G LC.png",
+			"/images/productos/excavadora/470G LC.png",
+			"/images/productos/excavadora/470G LC.png",
+			"/images/productos/excavadora/470G LC.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 11,
+		"nombre": "670G LC",
+		"descripcion": "Excavadores para minería",
+		"categoria": "Excavadora",
+		"especificaciones": {
+			"potencia_neta": "345 kW (463 hp)",
+			"profundidad_máx_de_excavación": "9.15 m (30 ft. 0 in.)",
+			"peso_operativo": "69,900 kg (154,103 lb.)"
+		},
+		"imagenes": [
+			"/images/productos/excavadora/670G LC.png",
+			"/images/productos/excavadora/670G LC.png",
+			"/images/productos/excavadora/670G LC.png",
+			"/images/productos/excavadora/670G LC.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 12,
+		"nombre": "870G LC",
+		"descripcion": "Excavadores para minería",
+		"categoria": "Excavadora",
+		"especificaciones": {
+			"potencia_neta": "377 kW (506 hp)",
+			"profundidad_máx_de_excavación": "7,14 m (23 ft 5 in)",
+			"peso_operativo": "83 900 kg (184,968 lb.)"
+		},
+		"imagenes": [
+			"/images/productos/excavadora/870G LC.png",
+			"/images/productos/excavadora/870G LC.png",
+			"/images/productos/excavadora/870G LC.png",
+			"/images/productos/excavadora/870G LC.png"
+		],
+		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 870G LC_compressed.pdf"
+	},
+	{
+		"id": 13,
+		"nombre": "444G",
+		"descripcion": "Cargadores frontales",
+		"categoria": "Cargador Frontal",
+		"especificaciones": {
+			"potencia_neta": "92 kW (124 hp) at 2100 rpm",
+			"peso_operativo": "11 289-11 941 kg (24 887-26 325 lb)",
+			"capacidad_del_cucharón": "1,9-2,1 m3 (2,5-2,75 cu. yd.)"
+		},
+		"imagenes": [
+			"/images/productos/cargador_frontal/444G.png",
+			"/images/productos/cargador_frontal/444G.png",
+			"/images/productos/cargador_frontal/444G.png",
+			"/images/productos/cargador_frontal/444G.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 14,
+		"nombre": "624P",
+		"descripcion": "Cargadores frontales",
+		"categoria": "Cargador Frontal",
+		"especificaciones": {
+			"potencia_neta": "141 kW (189 hp) a 1800 r. p. m.",
+			"peso_de_funcionamiento": "15 450 kg (34 060 lb)",
+			"capacidad_de_la_cuchara": "2,3–5,4 m³ (3,0–7,1 yd³)"
+		},
+		"imagenes": [
+			"/images/productos/cargador_frontal/624P.png",
+			"/images/productos/cargador_frontal/624P.png",
+			"/images/productos/cargador_frontal/624P.png",
+			"/images/productos/cargador_frontal/624P.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 15,
+		"nombre": "644G",
+		"descripcion": "Cargadores frontales",
+		"categoria": "Cargador Frontal",
+		"especificaciones": {
+			"potencia_neta": "185 kW (248 hp) a 1800 rpm",
+			"peso_en_orden_de_trabajo": "17 095–17 314 kg (37 688–38 170 lb.)",
+			"capacidad_del_cucharón": "3,10–3,25 m³ (4,00–4,25 yd³)"
+		},
+		"imagenes": [
+			"/images/productos/cargador_frontal/644G.png",
+			"/images/productos/cargador_frontal/644G.png",
+			"/images/productos/cargador_frontal/644G.png",
+			"/images/productos/cargador_frontal/644G.png"
+		],
+		"pdfUrl": "/pdfs/Cargador_Frontal/FICHA TÉCNICA - 644G_compressed.pdf"
+	},
+	{
+		"id": 16,
+		"nombre": "644P",
+		"descripcion": "Cargadores frontales",
+		"categoria": "Cargador Frontal",
+		"especificaciones": {
+			"potencia_neta": "167 kW (224 hp) a 1700 rpm",
+			"peso_de_funcionamiento": "18 283 kg (40 308 lb)",
+			"capacidad_de_la_cuchara": "2,5–3,7 m³ (3,2–4,9 yd³)"
+		},
+		"imagenes": [
+			"/images/productos/cargador_frontal/644P.png",
+			"/images/productos/cargador_frontal/644P.png",
+			"/images/productos/cargador_frontal/644P.png",
+			"/images/productos/cargador_frontal/644P.png"
+		],
+		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 644P_compressed.pdf"
+	},
+	{
+		"id": 17,
+		"nombre": "724P",
+		"descripcion": "Cargadores frontales",
+		"categoria": "Cargador Frontal",
+		"especificaciones": {
+			"potencia_neta": "197 kW (264 hp) a 1800 rpm",
+			"peso_de_funcionamiento": "19 123 kg (42 159 lb)",
+			"capacidad_de_la_cuchara": "2,5–4,2 m³ (3,2–5,5 yd³)"
+		},
+		"imagenes": [
+			"/images/productos/cargador_frontal/724P.png",
+			"/images/productos/cargador_frontal/724P.png",
+			"/images/productos/cargador_frontal/724P.png",
+			"/images/productos/cargador_frontal/724P.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 18,
+		"nombre": "744P",
+		"descripcion": "Cargadores frontales",
+		"categoria": "Cargador Frontal",
+		"especificaciones": {
+			"potencia_neta": "236 kW (316 hp) a 1500 rpm",
+			"peso_de_operativo": "24 907 a 26 630 kg (54 920 a 58 709 lb)",
+			"capacidad_del_cucharón": "3,8 a 4,5 m3 (5,0 a 5,85 yd3)"
+		},
+		"imagenes": [
+			"/images/productos/cargador_frontal/744P.png",
+			"/images/productos/cargador_frontal/744P.png",
+			"/images/productos/cargador_frontal/744P.png",
+			"/images/productos/cargador_frontal/744P.png"
+		],
+		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 744p_compressed.pdf"
+	},
+	{
+		"id": 19,
+		"nombre": "844P",
+		"descripcion": "Cargadores frontales",
+		"categoria": "Cargador Frontal",
+		"especificaciones": {
+			"potencia_neta": "311 kW (417 hp) a 1400 rpm",
+			"peso_operativo": "32 439–33 851 kg (71,516–74,629 lb.)",
+			"capacidad_del_cucharón": "4,8-6,1 m3 (6,3 a 8,0 yd³)"
+		},
+		"imagenes": [
+			"/images/productos/cargador_frontal/844P.png",
+			"/images/productos/cargador_frontal/844P.png",
+			"/images/productos/cargador_frontal/844P.png",
+			"/images/productos/cargador_frontal/844P.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 20,
+		"nombre": "550J",
+		"descripcion": "Tractores de orugas",
+		"categoria": "Tractor de Orugas",
+		"especificaciones": {
+			"potencia_neta": "60–63 kW (80–85 hp) a 2200 rpm",
+			"distancia_sobre_el_suelo": "2184 mm (86 pulg.)",
+			"peso_operativo": "7718–8279 kg (17 016–18 252 lb)",
+			"rango_de_ancho_de_la_hoja": "2667–3150 mm (105–124 pulg.)"
+		},
+		"imagenes": [
+			"/images/productos/tractor_oruga/550J.png",
+			"/images/productos/tractor_oruga/550J.png",
+			"/images/productos/tractor_oruga/550J.png",
+			"/images/productos/tractor_oruga/550J.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 21,
+		"nombre": "650J",
+		"descripcion": "Tractores de orugas",
+		"categoria": "Tractor de Orugas",
+		"especificaciones": {
+			"potencia_neta": "74 kW (99 CV) a 2.200 rpm",
+			"distancia_sobre_el_suelo": "2210–2337 mm (87–92 pulgadas)",
+			"peso_operativo": "8419–8977 kg (18 560–19 750 lb)",
+			"rango_de_ancho_de_la_hoja": "2667–3150 mm (105–124 pulg.)"
+		},
+		"imagenes": [
+			"/images/productos/tractor_oruga/650J.png",
+			"/images/productos/tractor_oruga/650J.png",
+			"/images/productos/tractor_oruga/650J.png",
+			"/images/productos/tractor_oruga/650J.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 22,
+		"nombre": "750J-II",
+		"descripcion": "Tractores de orugas",
+		"categoria": "Tractor de Orugas",
+		"especificaciones": {
+			"potencia_neta_del_motor": "116 kW (155 hp) a 2,100 r/min",
+			"oruga_sobre_el_suelo": " 3,073 mm (121 in)",
+			"peso_operativo": "15,599 a 16,655 kg (de 34,395 lb a 36,725 lb)",
+			"rango_de_ancho_de_la_hoja": "3,295 a 3,962 mm (de 130 a 156 in)"
+		},
+		"imagenes": [
+			"/images/productos/tractor_oruga/750JII.png",
+			"/images/productos/tractor_oruga/750JII.png",
+			"/images/productos/tractor_oruga/750JII.png",
+			"/images/productos/tractor_oruga/750JII.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 23,
+		"nombre": "850J-II",
+		"descripcion": "Tractores de orugas",
+		"categoria": "Tractor de Orugas",
+		"especificaciones": {
+			"potencia_neta_del_motor": "153 kW (205 HP) a 1,800 r/min",
+			"oruga_sobre_el_suelo": "2,769 a 3,284 mm (de 109 a 129 in)",
+			"peso_operativo": "18,219 a 20,146 kg(de 40,165 a 44,414 lb)",
+			"rango_de_ancho_de_la_hoja": "3,251 a 4,267 mm (de 128 a 168in)"
+		},
+		"imagenes": [
+			"/images/productos/tractor_oruga/850JII.png",
+			"/images/productos/tractor_oruga/850JII.png",
+			"/images/productos/tractor_oruga/850JII.png",
+			"/images/productos/tractor_oruga/850JII.png"
+		],
+		"pdfUrl": "/pdfs/Tractor_Oruga/FICHA TÉCNICA - 850J-II_compressed.pdf"
+	},
+	{
+		"id": 24,
+		"nombre": "1050 P",
+		"descripcion": "Tractores de orugas",
+		"categoria": "Tractor de Orugas",
+		"especificaciones": {
+			"potencia_neta": "264 kW (354 hp) at 1700 rpm",
+			"peso_de_funcionamiento": "42 640 a 42 900 kg (94 000 a 94 580 lb.)",
+			"cadena_sobre_el_suelo": "3419 mm (134.6 in.)"
+		},
+		"imagenes": [
+			"/images/productos/tractor_oruga/1050P.png",
+			"/images/productos/tractor_oruga/1050P.png",
+			"/images/productos/tractor_oruga/1050P.png",
+			"/images/productos/tractor_oruga/1050P.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 25,
+		"nombre": "620P",
+		"descripcion": "Motoniveladora",
+		"categoria": "Motoniveladora",
+		"especificaciones": {
+			"potencia_neta": "150-200 HP (112-149 kW)",
+			"par_de_aprieta_máximo_neto": "675 lb-ft (915 Nm)",
+			"fuerza_de_tiro_de_la_hoja": "14 091 kg (31 066 lb)",
+			"reserva_de_par_de_apriete_negro": "37 %"
+		},
+		"imagenes": [
+			"/images/productos/motoniveladora/620P.png",
+			"/images/productos/motoniveladora/620P.png",
+			"/images/productos/motoniveladora/620P.png",
+			"/images/productos/motoniveladora/620P.png"
+		],
+		"pdfUrl": "/pdfs/Motoniveladora/FICHA TÉCNICA - 620P_compressed.pdf"
+	},
+	{
+		"id": 26,
+		"nombre": "670P",
+		"descripcion": "Motoniveladora",
+		"categoria": "Motoniveladora",
+		"especificaciones": {
+			"potencia_neta": "180-230 HP (134-172 kW)",
+			"par_de_aprieta_máximo_neto": "882 lb-ft (1196 Nm)",
+			"fuerza_de_tiro_de_la_hoja": "15 501 kg (34 173 lb)",
+			"reserva_de_par_de_apriete_negro": "56 %"
+		},
+		"imagenes": [
+			"/images/productos/motoniveladora/670P.png",
+			"/images/productos/motoniveladora/670P.png",
+			"/images/productos/motoniveladora/670P.png",
+			"/images/productos/motoniveladora/670P.png"
+		],
+		"pdfUrl": "/pdfs/Motoniveladora/FICHA TÉCNICA - 620P_compressed.pdf"
+	},
+	{
+		"id": 27,
+		"nombre": "770P",
+		"descripcion": "Motoniveladora",
+		"categoria": "Motoniveladora",
+		"especificaciones": {
+			"potencia_neta": "200-250 HP (149-187 kW)",
+			"par_de_aprieta_máximo_neto": "1288 Nm (950 lb-ft)",
+			"fuerza_de_tiro_de_la_hoja": "15 501 kg (34 173 lb)",
+			"reserva_de_par_de_apriete_negro": "55 %"
+		},
+		"imagenes": [
+			"/images/productos/motoniveladora/770P.png",
+			"/images/productos/motoniveladora/770P.png",
+			"/images/productos/motoniveladora/770P.png",
+			"/images/productos/motoniveladora/770P.png"
+		],
+		"pdfUrl": "/pdfs/Motoniveladora/FICHA TÉCNICA - 620P_compressed.pdf"
+	},
+	{
+		"id": 28,
+		"nombre": "HC 110",
+		"descripcion": "HAMM",
+		"categoria": "Rodillos de Suelo",
+		"especificaciones": {
+			"motor": "Motor con la mejor potencia de su clase y un potente modo ECO",
+			"visión": "Excelente visión de la máquina y la obra",
+			"mantenimiento": "Fácil mantenimiento y revisión",
+			"funcionamiento": "Funcionamiento intuitivo y neutro en cuanto a idiomas",
+			"rendimiento": "Alto rendimiento de compactación",
+			"articulación": "Articulación de 3 puntos para una excelente tracción y capacidad todoterreno"
+		},
+		"imagenes": [
+			"/images/productos/rodillos_de_suelo/HC110.png",
+			"/images/productos/rodillos_de_suelo/HC110.png",
+			"/images/productos/rodillos_de_suelo/HC110.png",
+			"/images/productos/rodillos_de_suelo/HC110.png"
+		],
+		"pdfUrl": "/pdfs/Rodillo_de_Suelo/HC_110.pdf"
+	},
+	{
+		"id": 29,
+		"nombre": "HC 110G",
+		"descripcion": "HAMM",
+		"categoria": "Rodillos de Suelo",
+		"especificaciones": {
+			"motor": "Motor con la mejor potencia de su clase y un potente modo ECO",
+			"articulacion": "Articulación de 3 puntos para una excelente tracción y capacidad todoterreno",
+			"alto_rendimiento": "Alto rendimiento de compactación",
+			"funcionamiento_intuitivo": "Funcionamiento intuitivo y neutro en cuanto a idiomas",
+			"mantenimiento": "Fácil mantenimiento y revisión",
+			"vision": "Excelente visión de la máquina y la obra"
+		},
+		"imagenes": [
+			"/images/productos/rodillos_de_suelo/HC110G.png",
+			"/images/productos/rodillos_de_suelo/HC110G.png",
+			"/images/productos/rodillos_de_suelo/HC110G.png",
+			"/images/productos/rodillos_de_suelo/HC110G.png"
+		],
+		"pdfUrl": "/pdfs/Rodillo_de_Suelo/HC_110G_ES.pdf"
+	},
+	{
+		"id": 30,
+		"nombre": "HC 200",
+		"descripcion": "HAMM",
+		"categoria": "Rodillos de Suelo",
+		"especificaciones": {
+			"alto_rendimiento": "Alto rendimiento de compactación",
+			"digital_ready": "Digital Ready",
+			"configuracion_personalizada": "Posibilidades de configuración personalizadas y una amplia gama de opciones",
+			"hammtronic": "Hammtronic para un gran confort, seguridad y reducción de emisiones",
+			"puesto_de_conduccion": "Amplio puesto de conducción con el concepto de manejo Easy Drive"
+		},
+		"imagenes": [
+			"/images/productos/rodillos_de_suelo/HC200.png",
+			"/images/productos/rodillos_de_suelo/HC200.png",
+			"/images/productos/rodillos_de_suelo/HC200.png",
+			"/images/productos/rodillos_de_suelo/HC200.png"
+		],
+		"pdfUrl": "/pdfs/Rodillo_de_Suelo/HC_200.pdf"
+	},
+	{
+		"id": 31,
+		"nombre": "320G",
+		"descripcion": "Jhon Deere",
+		"categoria": "Minicargadores",
+		"especificaciones": {
+			"capacidad_de_operación_nominal": "994 kg (2,190 lb.)",
+			"potencia_bruta": "51,7 kW (69 CV) a 2.500 rpm",
+			"potencia_neta": "49,4 kW (66 CV) a 2.500 rpm",
+			"peso_operativo": "3246 kg (7.150 lb.)"
+		},
+		"imagenes": [
+			"/images/productos/minicargadores/320G.png",
+			"/images/productos/minicargadores/320G.png",
+			"/images/productos/minicargadores/320G.png",
+			"/images/productos/minicargadores/320G.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 32,
+		"nombre": "324G",
+		"descripcion": "Jhon Deere",
+		"categoria": "Minicargadores",
+		"especificaciones": {
+			"capacidad_de_operación_nominal": "1221 kg (2,690 lb.)",
+			"potencia_bruta": "55,0 kW (74 CV) a 2.500 rpm",
+			"potencia_neta": "52,7 kW (71 CV) a 2.500 rpm",
+			"peso_operativo": "3496 kg (7.700 lb.)"
+		},
+		"imagenes": [
+			"/images/productos/minicargadores/324G.png",
+			"/images/productos/minicargadores/324G.png",
+			"/images/productos/minicargadores/324G.png",
+			"/images/productos/minicargadores/324G.png"
+		],
+		"pdfUrl": ""
+	},
+	{
+		"id": 33,
+		"nombre": "325G",
+		"descripcion": "Jhon Deere",
+		"categoria": "Minicargadores",
+		"especificaciones": {
+			"potencia_bruta": "54,8 kW (74 CV)",
+			"potencia_neta": "52,5 kW (70 CV)",
+			"capacidad_operativa_nominal": "1176 kg (2590 lb)",
+			"peso_operativo": "1176 kg (2590 lb)"
+		},
+		"imagenes": [
+			"/images/productos/minicargadores/325G.png",
+			"/images/productos/minicargadores/325G.png",
+			"/images/productos/minicargadores/325G.png",
+			"/images/productos/minicargadores/325G.png"
+		],
+		"pdfUrl": ""
 	}
 ]

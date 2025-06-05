@@ -1,28 +1,33 @@
 <template>
-    <div class="flex flex-col h-full md:p-4 p-0">
-        <div class="flex items-center justify-between bg-gray-100">
-            <h1 class="md:text-3xl text-2xl text-black font-bold">{{ productName }}</h1>
-            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 cursor-pointer transition duration-200"
+    <div class="flex flex-col h-full md:p-4 md:pb-0 md:pr-0 p-0">
+        <div class="flex items-center gap-4 bg-[#0F0F0F]">
+            <div class="ml-8 px-4 py-2 border border-[#444341] text-white flex gap-4 items-center justify-center cursor-pointer transition duration-200 text-xs font-semibold"
                 @click="handleClose">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
+                Volver atrás
+            </div>
+            <div class="flex gap-2 items-center">
+                <p class="text-base text-white font-normal underline">{{ categoriaActual }}</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <h1 class="text-base text-white font-normal">{{ productName }}</h1>
             </div>
         </div>
-        <div class="flex flex-col md:flex-row gap-4 mt-4 p-4 w-full bg-white rounded-md">
+        <div
+            class="flex flex-col md:flex-row gap-4 mt-4 p-4 w-full h-full bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center rounded-md">
             <div class="md:w-1/2 w-full flex flex-col">
                 <!-- Imagen principal grande -->
-                <div class="overflow-hidden w-full relative md:h-96 h-44">
+                <div class="overflow-hidden w-full relative md:h-[25rem] h-44">
                     <div v-if="!imagenesCargadas[0]"
                         class="w-full h-full bg-gray-200 shimmer absolute inset-0 card-fade-up z-0"></div>
                     <img v-if="producto?.imagenes?.[0]" :src="producto.imagenes[0]" alt="Imagen principal"
-                        class="w-full h-full object-cover z-10 relative" @load="imagenesCargadas[0] = true" />
+                        class="w-full h-full object-contain z-10 relative" @load="imagenesCargadas[0] = true" />
                 </div>
                 <!-- Miniaturas -->
-                <div class="grid grid-cols-3 gap-3 mt-4">
+                <!-- <div class="grid grid-cols-3 gap-3 mt-4">
                     <div v-for="(img, index) in producto?.imagenes?.slice(1, 4)" :key="index"
                         class="relative md:h-24 h-14 w-full border border-gray-300 rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300 cursor-pointer">
                         <div v-if="!imagenesCargadas[index + 1]"
@@ -30,18 +35,35 @@
                         <img :src="img" alt="Miniatura" class="w-full h-full object-cover z-10 relative"
                             @load="imagenesCargadas[index + 1] = true" />
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="p-4">
-                <h2 class="text-2xl text-black font-semibold">Especificaciones</h2>
-                <ul class="mt-4 space-y-2 list-disc pl-5">
+                <h1 class="text-2xl text-white font-bold">John Deere <br> {{ productName }}</h1>
+                <hr class="my-4 border-[rgba(255,255,255,0.4)]" />
+                <h2 class="text-base text-white font-semibold uppercase">Especificaciones</h2>
+                <ul class="mt-4 space-y-2 list-disc pl-5 w-full">
                     <template v-if="producto">
                         <template v-if="producto.especificaciones && Object.keys(producto.especificaciones).length">
-                            <li v-for="(value, key) in producto.especificaciones" :key="key" class="text-gray-700">
-                                {{ formatearClave(String(key)) }}: {{ value }}
+                            <li v-for="(value, key) in producto.especificaciones" :key="key"
+                                class="text-white flex gap-2 -ml-4">
+                                <img :src="icon" alt="icon" class="w-4 h-4 mt-1" /><span class="font-bold">{{
+                                    formatearClave(String(key)) }}</span>: {{
+                                        value }}
                             </li>
                         </template>
                         <li v-else class="text-gray-500 italic">No hay especificaciones disponibles.</li>
+                        <div class="flex justify-center pt-6">
+                            <a v-if="producto?.pdfUrl" :href="producto.pdfUrl" download
+                                class="inline-flex cursor-pointer items-center gap-2 px-5 py-2.5 rounded-full bg-[#F8D146] text-[#0F0F0F] font-semibold text-sm uppercase tracking-wide shadow-md hover:bg-[#e7c230] transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v9m0 0l-3-3m3 3l3-3M12 3v9" />
+                                </svg>
+                                Descargar PDF
+                            </a>
+                        </div>
+
                     </template>
                     <li v-else class="text-gray-400 italic">Cargando especificaciones...</li>
                 </ul>
@@ -55,11 +77,13 @@ definePageMeta({
     layout: 'landing'
 })
 import { useRoute } from 'vue-router';
+import icon from '@/assets/image/icons/icon_especificaciones.svg'
 
 const route = useRoute();
 const router = useRouter();
 const productName = route.params.name as string;
 const productoStore = useProductosStore();
+const categoriaActual = computed(() => productoStore.categoriaSeleccionada);
 
 function handleClose() {
     window.history.back();
@@ -76,24 +100,16 @@ onMounted(async () => {
     if (!productoStore.productos.length) {
         await productoStore.fetchProductos()
     }
-})
 
-// Watch para actualizar `producto` cuando se cargan los productos
-watch(
-    () => productoStore.productos,
-    (nuevosProductos) => {
-        const encontrado = nuevosProductos.find(p => p.nombre === productName);
-        if (encontrado) {
-            producto.value = encontrado;
-            if (encontrado.imagenes) {
-                imagenesCargadas.value = encontrado.imagenes.map(() => false);
-            }
-        } else {
-            router.replace('/404'); // redirige si no se encuentra
-        }
-    },
-    { immediate: true }
-);
+    // Esperar a que estén cargados para buscar el producto
+    const encontrado = productoStore.productos.find(p => p.nombre === productName)
+    if (encontrado) {
+        producto.value = encontrado
+        imagenesCargadas.value = encontrado.imagenes?.map(() => false) || []
+    } else {
+        router.replace('/404')
+    }
+})
 
 </script>
 <style scoped>

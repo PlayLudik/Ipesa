@@ -17,6 +17,7 @@
     "dotenv": "^16.4.5",
     "floating-vue": "^5.2.2",
     "nuxt": "^3.14.1592",
+    "nuxt-app": "file:",
     "stylus": "^0.63.0",
     "vue": "latest",
     "vue-router": "latest"

@@ -7,19 +7,18 @@ interface IProductoState {
 export const useProductosStore = defineStore("productos", {
 	state: (): IProductoState => ({
 		productos: [],
-		categoriaSeleccionada: "Excabación",
+		categoriaSeleccionada: "Retroexcavadora",
 	}),
 	actions: {
 		async fetchProductos(categoria?: string) {
 			try {
 				const data = await $fetch<Producto[]>("/productos.json");
-
 				// Filtramos por categoría si se especifica
 				const filtrados = categoria
 					? data.filter((producto) => producto.categoria === categoria)
 					: data;
 
-				this.categoriaSeleccionada = categoria ?? "Excabación";
+				this.categoriaSeleccionada = categoria ?? "Retroexcavadora";
 				this.productos = filtrados;
 			} catch (error) {
 				console.error("Error al obtener productos:", error);

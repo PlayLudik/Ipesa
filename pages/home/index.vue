@@ -1,24 +1,33 @@
 <template>
-    <div class="flex items-center justify-center h-screen bg-gray-100 text-black overflow-hidden">
-        <!-- Main Content -->
-        <div ref="scrollContainer" class="flex-1 flex flex-col bg-gray-100 h-full md:p-4 p-0 overflow-y-auto"
-            @scroll="handleScroll">
-            <div class="flex items-center justify-between w-full">
-                <img src="@/assets/image/IPESA-LOGO.png" alt="logo" class="w-28 mb-6 md:flex hidden" />
-                <h3 class="md:text-xl text-2xl font-semibold md:mb-0 mb-4">{{ categoriaActual }}</h3>
-            </div>
-            <div class="grid grid-cols-12 gap-4">
-                <div v-for="(product, index) in displayedProducts" :key="index"
-                    class="lg:col-span-3 col-span-6 cursor-pointer card-fade-up" @click="goToProduct(product.nombre)">
-                    <ProductCard :nombre="product.nombre" :categoria="product.categoria"
-                        :imagen="product.imagenes[0]" />
-                </div>
-            </div>
+    <div class="flex items-center justify-center h-screen text-black bg-[#0F0F0F]">
 
-            <div v-if="loading" class="grid grid-cols-12 gap-4 mt-4">
-                <div v-for="n in 8" :key="'skeleton-' + n" class="lg:col-span-3 col-span-6">
-                    <CardSkeleton />
+        <!-- Main Content -->
+        <div ref="scrollContainer" class="flex-1 flex flex-col h-full overflow-y-auto overflow-x-visible relative z-0">
+            <div class="flex items-center justify-between w-full h-20 px-2">
+                <h3 class="md:text-xl text-2xl font-semibold md:mb-0 mb-4 text-white">{{ categoriaActual }}</h3>
+            </div>
+            <!-- Loader mientras carga -->
+            <div v-if="loading" class="flex items-center justify-center w-full h-full">
+                <svg class="animate-spin h-12 w-12 text-[#F8D146]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+                    </path>
+                </svg>
+            </div>
+            <div v-else
+                class="bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center flex-1 p-2 overflow-x-hidden flex flex-col">
+                <div class="grid grid-cols-12 gap-4">
+                    <div v-for="(product, index) in paginatedProducts" :key="index"
+                        class="lg:col-span-4 col-span-6 cursor-pointer card-fade-up"
+                        @click="goToProduct(product.nombre)">
+                        <ProductCard :nombre="product.nombre" :categoria="product.categoria"
+                            :imagen="product.imagenes[0]" />
+                    </div>
                 </div>
+
+                <!--Pagination-->
+                <Pagination :current-page="currentPage" :total-pages="totalPages" @update:page="currentPage = $event" />
             </div>
         </div>
     </div>
@@ -29,9 +38,9 @@ definePageMeta({
     layout: 'landing'
 })
 import { ref, onMounted } from 'vue';
-import ProductCard from '@/components/ProductCard.vue';
-import CardSkeleton from "@/components/CardSkeleton.vue";
 import { useRouter } from 'vue-router';
+import ProductCard from '@/components/ProductCard.vue';
+import Pagination from '@/components/Pagination.vue'
 
 const productoStore = useProductosStore();
 const categoriaActual = computed(() => productoStore.categoriaSeleccionada);
@@ -39,27 +48,14 @@ const allProducts = ref<Producto[]>([]);
 const displayedProducts = ref<Producto[]>([]);
 const loading = ref(false);
 const scrollContainer = ref<HTMLElement | null>(null);
+const currentPage = ref(1)
+const perPage = 6
 
-// Cargar más productos simuladamente
-function loadMoreProducts() {
-    loading.value = true;
+const totalPages = computed(() => Math.ceil(allProducts.value.length / perPage))
 
-    setTimeout(() => {
-        const more = allProducts.value.slice(displayedProducts.value.length, displayedProducts.value.length + 12);
-        displayedProducts.value.push(...more);
-        loading.value = false;
-    }, 500);
-}
-
-// Detectar scroll
-function handleScroll() {
-    if (!scrollContainer.value || loading.value) return;
-
-    const { scrollTop, scrollHeight, clientHeight } = scrollContainer.value;
-    if (scrollTop + clientHeight >= scrollHeight - 100) {
-        loadMoreProducts();
-    }
-}
+const paginatedProducts = computed(() =>
+    allProducts.value.slice((currentPage.value - 1) * perPage, currentPage.value * perPage)
+)
 
 const router = useRouter();
 
@@ -68,20 +64,22 @@ function goToProduct(product: string) {
 }
 
 onMounted(async () => {
+    loading.value = true
     if (productoStore.categoriaSeleccionada) {
         await productoStore.fetchProductos(productoStore.categoriaSeleccionada);
         allProducts.value = productoStore.productos;
-        loadMoreProducts();
     }
+    loading.value = false
 });
 
 watch(categoriaActual, async (nuevaCategoria) => {
     if (nuevaCategoria) {
+        loading.value = true
         displayedProducts.value = [];
         allProducts.value = [];
         await productoStore.fetchProductos(nuevaCategoria);
         allProducts.value = productoStore.productos;
-        loadMoreProducts();
+        loading.value = false
         nextTick(() => {
             scrollContainer.value?.scrollTo({ top: 0, behavior: 'smooth' })
         })
