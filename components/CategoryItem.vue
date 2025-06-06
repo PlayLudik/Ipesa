@@ -11,7 +11,7 @@
         <!-- Contenido principal (sin margen derecho) -->
         <div class="flex flex-col items-center justify-center w-full h-full transition-colors duration-200 md:pr-4 px-2"
             :class="isActive ? 'bg-[#F8D146] text-black' : 'bg-[#0F0F0F] text-white'">
-            <img :src="`/images/sidebar/${category.toLowerCase()}${isActive ? '-color' : ''}.png`" alt="icon"
+            <img :src="`/images/sidebar/${category.toLowerCase()}${isActive ? '-color' : ''}.webp`" alt="icon"
                 class="md:w-28 w-16 md:mb-2 mb-0 md:mt-0 mt-2" />
             <span class="capitalize text-sm  font-bold text-center">{{ category }}</span>
         </div>
