@@ -7,7 +7,8 @@
                 <h3 class="md:text-xl text-base font-semibold text-white uppercase">{{ categoriaActual }}</h3>
             </div>
             <!-- Loader mientras carga -->
-            <div v-if="loading" class="flex items-center justify-center w-full h-full">
+            <div v-if="loading"
+                class="bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center flex-1  flex items-center justify-center w-full h-full">
                 <svg class="animate-spin h-12 w-12 text-[#F8D146]" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -27,7 +28,7 @@
                 </div>
 
                 <!--Pagination-->
-                <div class="hidden md:flex justify-center">
+                <div class="flex justify-center">
                     <Pagination :current-page="productoStore.currentPage" :total-pages="productoStore.totalPages"
                         @update:page="productoStore.setPage" />
                 </div>

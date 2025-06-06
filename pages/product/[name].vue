@@ -9,16 +9,17 @@
                 Volver atrás
             </div>
             <div class="flex gap-2 items-center">
-                <p class="text-base text-white font-normal underline">{{ categoriaActual }}</p>
+                <p class="text-base text-white font-normal underline ">{{ categoriaActual }}</p>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
                 <h1 class="text-base text-white font-normal">{{ productName }}</h1>
             </div>
         </div>
-        <div
-            class="flex flex-col md:flex-row gap-4 mt-4 p-4 w-full flex-1 bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center rounded-md">
-            <div class="md:w-1/2 w-full flex flex-col">
+        <div class="flex justify-center items-center flex-col md:flex-row gap-4 mt-4 p-4 w-full flex-1 
+         bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center rounded-md 
+         overflow-y-auto max-h-[calc(100vh-6.2rem)] md:max-h-full relative custom-scroll">
+            <div class="md:w-1/2 w-full flex flex-col pt-4 md:pt-0">
                 <!--Volver Mobile-->
                 <div class="px-4 py-2 border max-w-36 border-[#444341] text-white flex md:hidden gap-4 items-center justify-center cursor-pointer transition duration-200 text-xs font-semibold bg-[#444341]"
                     @click="handleClose">
@@ -29,11 +30,12 @@
                     Volver atrás
                 </div>
                 <!-- Imagen principal grande -->
-                <div class="overflow-hidden w-full relative md:h-[25rem] h-44">
+                <div class="w-full relative md:h-[25rem] h-44">
                     <div v-if="!imagenesCargadas[0]"
-                        class="w-full h-full bg-gray-200 shimmer absolute inset-0 card-fade-up z-0"></div>
+                        class="w-full h-full bg-[#0F0F0F] shimmer absolute inset-0 card-fade-up z-0"></div>
                     <img v-if="producto?.imagenes?.[0]" :src="producto.imagenes[0]" alt="Imagen principal"
-                        class="w-full h-full object-contain z-10 relative" @load="imagenesCargadas[0] = true" />
+                        class="w-full h-full object-contain z-10 relative hover-outline-glow transition-all duration-300 animate__animated animate__fadeInLeft"
+                        @load="imagenesCargadas[0] = true" />
                 </div>
                 <!-- Miniaturas -->
                 <!-- <div class="grid grid-cols-3 gap-3 mt-4">
@@ -47,10 +49,17 @@
                 </div> -->
             </div>
             <div class="p-2">
-                <h1 class="text-2xl text-white font-bold">{{ descripcionActual }} <br> {{ productName }}</h1>
-                <hr class="my-4 border-[rgba(255,255,255,0.4)]" />
-                <h2 class="text-base text-white font-semibold uppercase">Especificaciones</h2>
-                <ul class="mt-4 space-y-2 list-disc md:pl-4 pl-0 w-full">
+                <h1 class="text-2xl text-white font-bold animate__animated animate__fadeInDown animate__delay-0_2s">
+                    <span>{{ descripcionActual }}</span> <br> <span>{{ productName
+                    }}</span>
+                </h1>
+                <hr
+                    class="my-4 border-[rgba(255,255,255,0.4)] animate__animated animate__fadeInDown animate__delay-0_4s" />
+                <h2
+                    class="text-base text-white font-semibold uppercase animate__animated animate__fadeInDown animate__delay-0_6s">
+                    Especificaciones</h2>
+                <ul
+                    class="mt-4 space-y-2 list-disc md:pl-4 pl-0 w-full animate__animated animate__fadeInDown animate__delay-0_8s">
                     <template v-if="producto">
                         <template v-if="producto.especificaciones && Object.keys(producto.especificaciones).length">
                             <div class="grid grid-cols-2 gap-x-2 gap-y-2 text-sm text-white">
@@ -138,6 +147,8 @@ onMounted(async () => {
 
 </script>
 <style scoped>
+@import 'animate.css';
+
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -152,5 +163,48 @@ onMounted(async () => {
 
 .card-fade-up {
     animation: fadeUp 0.4s ease-out;
+}
+
+.hover-outline-glow {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.40)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.40));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.animate__delay-0_2s {
+    animation-delay: 0.2s;
+}
+
+.animate__delay-0_4s {
+    animation-delay: 0.4s;
+}
+
+.animate__delay-0_6s {
+    animation-delay: 0.6s;
+}
+
+.animate__delay-0_8s {
+    animation-delay: 0.8s;
+}
+
+/* Para navegadores WebKit como Chrome, Safari */
+.custom-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Para Firefox */
+.custom-scroll {
+    scrollbar-width: thin;
+    /* más delgado */
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
 </style>
