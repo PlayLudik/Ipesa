@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col h-full md:p-4 md:pb-0 md:pr-0 p-0">
-        <div class="flex items-center gap-4 bg-[#0F0F0F]">
-            <div class="ml-8 px-4 py-2 border border-[#444341] text-white flex gap-4 items-center justify-center cursor-pointer transition duration-200 text-xs font-semibold"
+        <div class="flex items-center gap-4 md:px-0 px-2 bg-[#0F0F0F]">
+            <div class="ml-8 px-4 py-2 border border-[#444341] text-white md:flex hidden gap-4 items-center justify-center cursor-pointer transition duration-200 text-xs font-semibold"
                 @click="handleClose">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -17,8 +17,17 @@
             </div>
         </div>
         <div
-            class="flex flex-col md:flex-row gap-4 mt-4 p-4 w-full h-full bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center rounded-md">
+            class="flex flex-col md:flex-row gap-4 mt-4 p-4 w-full flex-1 bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center rounded-md">
             <div class="md:w-1/2 w-full flex flex-col">
+                <!--Volver Mobile-->
+                <div class="px-4 py-2 border max-w-36 border-[#444341] text-white flex md:hidden gap-4 items-center justify-center cursor-pointer transition duration-200 text-xs font-semibold bg-[#444341]"
+                    @click="handleClose">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Volver atrás
+                </div>
                 <!-- Imagen principal grande -->
                 <div class="overflow-hidden w-full relative md:h-[25rem] h-44">
                     <div v-if="!imagenesCargadas[0]"
@@ -37,35 +46,43 @@
                     </div>
                 </div> -->
             </div>
-            <div class="p-4">
-                <h1 class="text-2xl text-white font-bold">John Deere <br> {{ productName }}</h1>
+            <div class="p-2">
+                <h1 class="text-2xl text-white font-bold">{{ descripcionActual }} <br> {{ productName }}</h1>
                 <hr class="my-4 border-[rgba(255,255,255,0.4)]" />
                 <h2 class="text-base text-white font-semibold uppercase">Especificaciones</h2>
-                <ul class="mt-4 space-y-2 list-disc pl-5 w-full">
+                <ul class="mt-4 space-y-2 list-disc md:pl-4 pl-0 w-full">
                     <template v-if="producto">
                         <template v-if="producto.especificaciones && Object.keys(producto.especificaciones).length">
-                            <li v-for="(value, key) in producto.especificaciones" :key="key"
-                                class="text-white flex gap-2 -ml-4">
-                                <img :src="icon" alt="icon" class="w-4 h-4 mt-1" /><span class="font-bold">{{
-                                    formatearClave(String(key)) }}</span>: {{
-                                        value }}
-                            </li>
+                            <div class="grid grid-cols-2 gap-x-2 gap-y-2 text-sm text-white">
+                                <template v-for="(value, key) in producto.especificaciones" :key="key">
+                                    <!-- Columna de clave -->
+                                    <div class="flex items-start gap-2">
+                                        <img :src="icon" alt="icon" class="w-4 h-4 mt-1" />
+                                        <span class="font-bold">{{ formatearClave(String(key)) }}</span>
+                                    </div>
+
+                                    <!-- Columna de valor -->
+                                    <div class="text-left">
+                                        {{ value }}
+                                    </div>
+                                </template>
+                            </div>
                         </template>
-                        <li v-else class="text-gray-500 italic">No hay especificaciones disponibles.</li>
-                        <div class="flex justify-center pt-6">
+                        <li v-else class="text-white italic">No hay especificaciones disponibles.</li>
+                        <div class="flex justify-center md:justify-start items-center pt-6">
                             <a v-if="producto?.pdfUrl" :href="producto.pdfUrl" download
-                                class="inline-flex cursor-pointer items-center gap-2 px-5 py-2.5 rounded-full bg-[#F8D146] text-[#0F0F0F] font-semibold text-sm uppercase tracking-wide shadow-md hover:bg-[#e7c230] transition">
+                                class="inline-flex cursor-pointer items-center gap-2 px-5 py-2.5 rounded-full bg-[#F8D146] text-[#0F0F0F] font-semibold md:text-sm text-xs uppercase tracking-wide shadow-md hover:bg-[#e7c230] transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v9m0 0l-3-3m3 3l3-3M12 3v9" />
                                 </svg>
-                                Descargar PDF
+                                Descargar Ficha Técnica
                             </a>
                         </div>
 
                     </template>
-                    <li v-else class="text-gray-400 italic">Cargando especificaciones...</li>
+                    <li v-else class="text-white italic">Cargando especificaciones...</li>
                 </ul>
             </div>
         </div>
@@ -84,12 +101,20 @@ const router = useRouter();
 const productName = route.params.name as string;
 const productoStore = useProductosStore();
 const categoriaActual = computed(() => productoStore.categoriaSeleccionada);
+const descripcionActual = computed(() => {
+    const producto = productoStore.productos.find(p => p.nombre === productName);
+    return producto ? producto.descripcion : '';
+});
+
+
 
 function handleClose() {
     window.history.back();
 }
 function formatearClave(key: string) {
-    return key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    return key
+        .replace(/_/g, ' ')
+        .replace(/(^|\s)([^\s])/gu, (_, espacio, letra) => espacio + letra.toUpperCase());
 }
 // Encuentra el producto por nombre
 const producto = ref<Producto>()

@@ -3,8 +3,8 @@
 
         <!-- Main Content -->
         <div ref="scrollContainer" class="flex-1 flex flex-col h-full overflow-y-auto overflow-x-visible relative z-0">
-            <div class="flex items-center justify-between w-full h-20 px-2">
-                <h3 class="md:text-xl text-2xl font-semibold md:mb-0 mb-4 text-white">{{ categoriaActual }}</h3>
+            <div class="flex items-center justify-between w-full md:h-20 h-12 px-2">
+                <h3 class="md:text-xl text-base font-semibold text-white uppercase">{{ categoriaActual }}</h3>
             </div>
             <!-- Loader mientras carga -->
             <div v-if="loading" class="flex items-center justify-center w-full h-full">
@@ -18,7 +18,7 @@
             <div v-else
                 class="bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center flex-1 p-2 overflow-x-hidden flex flex-col">
                 <div class="grid grid-cols-12 gap-4">
-                    <div v-for="(product, index) in paginatedProducts" :key="index"
+                    <div v-for="(product, index) in productoStore.paginatedProducts" :key="index"
                         class="lg:col-span-4 col-span-6 cursor-pointer card-fade-up"
                         @click="goToProduct(product.nombre)">
                         <ProductCard :nombre="product.nombre" :categoria="product.categoria"
@@ -27,7 +27,10 @@
                 </div>
 
                 <!--Pagination-->
-                <Pagination :current-page="currentPage" :total-pages="totalPages" @update:page="currentPage = $event" />
+                <div class="hidden md:flex justify-center">
+                    <Pagination :current-page="productoStore.currentPage" :total-pages="productoStore.totalPages"
+                        @update:page="productoStore.setPage" />
+                </div>
             </div>
         </div>
     </div>
@@ -48,15 +51,6 @@ const allProducts = ref<Producto[]>([]);
 const displayedProducts = ref<Producto[]>([]);
 const loading = ref(false);
 const scrollContainer = ref<HTMLElement | null>(null);
-const currentPage = ref(1)
-const perPage = 6
-
-const totalPages = computed(() => Math.ceil(allProducts.value.length / perPage))
-
-const paginatedProducts = computed(() =>
-    allProducts.value.slice((currentPage.value - 1) * perPage, currentPage.value * perPage)
-)
-
 const router = useRouter();
 
 function goToProduct(product: string) {

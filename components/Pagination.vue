@@ -8,9 +8,12 @@
         </button>
 
         <!-- Páginas -->
-        <span v-for="page in visiblePages" :key="page" class="px-2 cursor-pointer"
-            :class="page === currentPage ? 'font-bold underline' : ''"
-            @click="() => typeof page === 'number' && $emit('update:page', page)">
+        <span v-for="page in visiblePages" :key="page" class="cursor-pointer" :class="[
+            'px-3 py-1 text-sm transition',
+            page === currentPage
+                ? 'bg-[#F8D146] md:bg-transparent md:text-white text-black underline font-bold'
+                : 'hover:underline font-medium'
+        ]" @click="() => typeof page === 'number' && $emit('update:page', page)">
             {{ page === '...' ? '...' : page }}
         </span>
 

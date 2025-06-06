@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"nombre": "310P T2",
-		"descripcion": "Retroexcavadora de gran potencia",
+		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
 			"potencia_neta_del_motor": "69 kW (91 hp) a 1,800 rpm",
@@ -20,7 +20,7 @@
 	{
 		"id": 2,
 		"nombre": "310P T3",
-		"descripcion": "Retroexcavadora de gran potencia",
+		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
 			"potencia_neta_del_motor": "69 kW (91 hp) a 1,800 rpm",
@@ -38,11 +38,11 @@
 	{
 		"id": 3,
 		"nombre": "320P T2",
-		"descripcion": "Retroexcavadora de gran potencia",
+		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
 			"peso": "90 kg",
-			"fuerza_centrifuga": "18 kN",
+			"fuerza_centrífuga": "18 kN",
 			"ancho_placa": "40 cm"
 		},
 		"imagenes": [
@@ -56,11 +56,11 @@
 	{
 		"id": 4,
 		"nombre": "320P T3",
-		"descripcion": "Retroexcavadora de gran potencia",
+		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
 			"peso": "90 kg",
-			"fuerza_centrifuga": "18 kN",
+			"fuerza_centrífuga": "18 kN",
 			"ancho_placa": "40 cm"
 		},
 		"imagenes": [
@@ -74,7 +74,7 @@
 	{
 		"id": 5,
 		"nombre": "130P",
-		"descripcion": "Excavadores para construcción",
+		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
 			"potencia_neta": "69 kW (93 hp)",
@@ -92,7 +92,7 @@
 	{
 		"id": 6,
 		"nombre": "160P",
-		"descripcion": "Excavadores para construcción",
+		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
 			"potencia_neta": "90 kW (121 hp)",
@@ -110,7 +110,7 @@
 	{
 		"id": 7,
 		"nombre": "200G",
-		"descripcion": "Excavadores para construcción",
+		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
 			"potencia_neta": "95 kw (130 hp)",
@@ -128,7 +128,7 @@
 	{
 		"id": 8,
 		"nombre": "210P",
-		"descripcion": "Excavadores para construcción",
+		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
 			"potencia_neta": "119 kW (159 hp)",
@@ -146,7 +146,7 @@
 	{
 		"id": 8,
 		"nombre": "250P",
-		"descripcion": "Excavadores para construcción",
+		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
 			"potencia_neta": "140 kW (188 hp)",
@@ -164,7 +164,7 @@
 	{
 		"id": 9,
 		"nombre": "350P",
-		"descripcion": "Excavadores para construcción",
+		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
 			"potencia_neta": "202 kW (271 hp)",
@@ -182,7 +182,7 @@
 	{
 		"id": 10,
 		"nombre": "470G LC",
-		"descripcion": "Excavadores para minería",
+		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
 			"potencia_neta": "257 kW (345 hp)",
@@ -200,7 +200,7 @@
 	{
 		"id": 11,
 		"nombre": "670G LC",
-		"descripcion": "Excavadores para minería",
+		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
 			"potencia_neta": "345 kW (463 hp)",
@@ -218,7 +218,7 @@
 	{
 		"id": 12,
 		"nombre": "870G LC",
-		"descripcion": "Excavadores para minería",
+		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
 			"potencia_neta": "377 kW (506 hp)",
@@ -236,7 +236,7 @@
 	{
 		"id": 13,
 		"nombre": "444G",
-		"descripcion": "Cargadores frontales",
+		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
 			"potencia_neta": "92 kW (124 hp) at 2100 rpm",
@@ -254,7 +254,7 @@
 	{
 		"id": 14,
 		"nombre": "624P",
-		"descripcion": "Cargadores frontales",
+		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
 			"potencia_neta": "141 kW (189 hp) a 1800 r. p. m.",
@@ -272,7 +272,7 @@
 	{
 		"id": 15,
 		"nombre": "644G",
-		"descripcion": "Cargadores frontales",
+		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
 			"potencia_neta": "185 kW (248 hp) a 1800 rpm",
@@ -290,7 +290,7 @@
 	{
 		"id": 16,
 		"nombre": "644P",
-		"descripcion": "Cargadores frontales",
+		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
 			"potencia_neta": "167 kW (224 hp) a 1700 rpm",
@@ -308,7 +308,7 @@
 	{
 		"id": 17,
 		"nombre": "724P",
-		"descripcion": "Cargadores frontales",
+		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
 			"potencia_neta": "197 kW (264 hp) a 1800 rpm",
@@ -326,7 +326,7 @@
 	{
 		"id": 18,
 		"nombre": "744P",
-		"descripcion": "Cargadores frontales",
+		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
 			"potencia_neta": "236 kW (316 hp) a 1500 rpm",
@@ -344,7 +344,7 @@
 	{
 		"id": 19,
 		"nombre": "844P",
-		"descripcion": "Cargadores frontales",
+		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
 			"potencia_neta": "311 kW (417 hp) a 1400 rpm",
@@ -362,7 +362,7 @@
 	{
 		"id": 20,
 		"nombre": "550J",
-		"descripcion": "Tractores de orugas",
+		"descripcion": "John Deere",
 		"categoria": "Tractor de Orugas",
 		"especificaciones": {
 			"potencia_neta": "60–63 kW (80–85 hp) a 2200 rpm",
@@ -381,7 +381,7 @@
 	{
 		"id": 21,
 		"nombre": "650J",
-		"descripcion": "Tractores de orugas",
+		"descripcion": "John Deere",
 		"categoria": "Tractor de Orugas",
 		"especificaciones": {
 			"potencia_neta": "74 kW (99 CV) a 2.200 rpm",
@@ -400,7 +400,7 @@
 	{
 		"id": 22,
 		"nombre": "750J-II",
-		"descripcion": "Tractores de orugas",
+		"descripcion": "John Deere",
 		"categoria": "Tractor de Orugas",
 		"especificaciones": {
 			"potencia_neta_del_motor": "116 kW (155 hp) a 2,100 r/min",
@@ -419,7 +419,7 @@
 	{
 		"id": 23,
 		"nombre": "850J-II",
-		"descripcion": "Tractores de orugas",
+		"descripcion": "John Deere",
 		"categoria": "Tractor de Orugas",
 		"especificaciones": {
 			"potencia_neta_del_motor": "153 kW (205 HP) a 1,800 r/min",
@@ -438,7 +438,7 @@
 	{
 		"id": 24,
 		"nombre": "1050 P",
-		"descripcion": "Tractores de orugas",
+		"descripcion": "John Deere",
 		"categoria": "Tractor de Orugas",
 		"especificaciones": {
 			"potencia_neta": "264 kW (354 hp) at 1700 rpm",
@@ -456,7 +456,7 @@
 	{
 		"id": 25,
 		"nombre": "620P",
-		"descripcion": "Motoniveladora",
+		"descripcion": "John Deere",
 		"categoria": "Motoniveladora",
 		"especificaciones": {
 			"potencia_neta": "150-200 HP (112-149 kW)",
@@ -475,7 +475,7 @@
 	{
 		"id": 26,
 		"nombre": "670P",
-		"descripcion": "Motoniveladora",
+		"descripcion": "John Deere",
 		"categoria": "Motoniveladora",
 		"especificaciones": {
 			"potencia_neta": "180-230 HP (134-172 kW)",
@@ -494,7 +494,7 @@
 	{
 		"id": 27,
 		"nombre": "770P",
-		"descripcion": "Motoniveladora",
+		"descripcion": "John Deere",
 		"categoria": "Motoniveladora",
 		"especificaciones": {
 			"potencia_neta": "200-250 HP (149-187 kW)",
@@ -538,11 +538,11 @@
 		"categoria": "Rodillos de Suelo",
 		"especificaciones": {
 			"motor": "Motor con la mejor potencia de su clase y un potente modo ECO",
-			"articulacion": "Articulación de 3 puntos para una excelente tracción y capacidad todoterreno",
+			"articulación": "Articulación de 3 puntos para una excelente tracción y capacidad todoterreno",
 			"alto_rendimiento": "Alto rendimiento de compactación",
 			"funcionamiento_intuitivo": "Funcionamiento intuitivo y neutro en cuanto a idiomas",
 			"mantenimiento": "Fácil mantenimiento y revisión",
-			"vision": "Excelente visión de la máquina y la obra"
+			"visión": "Excelente visión de la máquina y la obra"
 		},
 		"imagenes": [
 			"/images/productos/rodillos_de_suelo/HC110G.png",
@@ -560,9 +560,9 @@
 		"especificaciones": {
 			"alto_rendimiento": "Alto rendimiento de compactación",
 			"digital_ready": "Digital Ready",
-			"configuracion_personalizada": "Posibilidades de configuración personalizadas y una amplia gama de opciones",
+			"configuración_personalizada": "Posibilidades de configuración personalizadas y una amplia gama de opciones",
 			"hammtronic": "Hammtronic para un gran confort, seguridad y reducción de emisiones",
-			"puesto_de_conduccion": "Amplio puesto de conducción con el concepto de manejo Easy Drive"
+			"puesto_de_conducción": "Amplio puesto de conducción con el concepto de manejo Easy Drive"
 		},
 		"imagenes": [
 			"/images/productos/rodillos_de_suelo/HC200.png",
@@ -575,7 +575,7 @@
 	{
 		"id": 31,
 		"nombre": "320G",
-		"descripcion": "Jhon Deere",
+		"descripcion": "John Deere",
 		"categoria": "Minicargadores",
 		"especificaciones": {
 			"capacidad_de_operación_nominal": "994 kg (2,190 lb.)",
@@ -594,7 +594,7 @@
 	{
 		"id": 32,
 		"nombre": "324G",
-		"descripcion": "Jhon Deere",
+		"descripcion": "John Deere",
 		"categoria": "Minicargadores",
 		"especificaciones": {
 			"capacidad_de_operación_nominal": "1221 kg (2,690 lb.)",
@@ -613,7 +613,7 @@
 	{
 		"id": 33,
 		"nombre": "325G",
-		"descripcion": "Jhon Deere",
+		"descripcion": "John Deere",
 		"categoria": "Minicargadores",
 		"especificaciones": {
 			"potencia_bruta": "54,8 kW (74 CV)",
