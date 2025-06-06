@@ -11,8 +11,8 @@
                 <slot />
             </div>
             <!-- Menú móvil al fondo -->
-            <MobileCategoryMenu class="md:hidden" :categories="categories"
-                :selected-category="productoStore.categoriaSeleccionada" @select="seleccionarCategoria" />
+            <!-- <MobileCategoryMenu class="md:hidden" :categories="categories"
+                :selected-category="productoStore.categoriaSeleccionada" @select="seleccionarCategoria" /> -->
         </div>
     </div>
 </template>
