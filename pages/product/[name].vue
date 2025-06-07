@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col h-full md:p-4 md:pb-0 md:pr-0 p-0">
-        <div class="flex items-center gap-4 md:px-0 px-2 bg-[#0F0F0F]">
+    <div class="flex flex-col min-h-screen md:p-4 md:pb-0 md:pr-0 pb-4">
+        <div class="flex items-center gap-4 md:px-0 px-2 bg-[#0F0F0F] md:h-14 h-10">
             <div class="ml-8 px-4 py-2 border border-[#444341] text-white md:flex hidden gap-4 items-center justify-center cursor-pointer transition duration-200 text-xs font-semibold"
                 @click="handleClose">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-6 h-6">
@@ -16,19 +16,18 @@
                 <h1 class="text-base text-white font-normal">{{ productName }}</h1>
             </div>
         </div>
-        <div class="flex justify-center items-center flex-col md:flex-row gap-4 mt-4 p-4 w-full flex-1 
-         bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center rounded-md 
-         overflow-y-auto max-h-[calc(100vh-6.2rem)] md:max-h-full relative custom-scroll">
-            <div class="md:w-1/2 w-full flex flex-col pt-4 md:pt-0">
-                <!--Volver Mobile-->
-                <div class="px-4 py-2 border max-w-36 border-[#444341] text-white flex md:hidden gap-4 items-center justify-center cursor-pointer transition duration-200 text-xs font-semibold bg-[#444341]"
-                    @click="handleClose">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white"
-                        class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                    Volver atrás
-                </div>
+        <div class="flex-1 flex flex-col h-full overflow-y-auto w-full justify-center items-center lg:flex-row gap-4 p-4 
+     bg-[url('@/assets/image/Producto.webp')] bg-cover bg-center rounded-md 
+     custom-scroll">
+            <!--Volver Mobile-->
+            <div class="px-4 py-2 mb-6 border self-start max-w-36 border-[#444341] text-white flex md:hidden gap-4 items-center justify-center cursor-pointer transition duration-200 text-xs font-semibold bg-[#444341]"
+                @click="handleClose">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver atrás
+            </div>
+            <div class="lg:w-1/2 w-full flex flex-col">
                 <!-- Imagen principal grande -->
                 <div class="w-full relative md:h-[25rem] h-44">
                     <div v-if="!imagenesCargadas[0]"
@@ -37,21 +36,11 @@
                         class="w-full h-full object-contain z-10 relative hover-outline-glow transition-all duration-300 animate__animated animate__fadeInLeft"
                         @load="imagenesCargadas[0] = true" />
                 </div>
-                <!-- Miniaturas -->
-                <!-- <div class="grid grid-cols-3 gap-3 mt-4">
-                    <div v-for="(img, index) in producto?.imagenes?.slice(1, 4)" :key="index"
-                        class="relative md:h-24 h-14 w-full border border-gray-300 rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300 cursor-pointer">
-                        <div v-if="!imagenesCargadas[index + 1]"
-                            class="absolute inset-0 bg-gray-300 shimmer card-fade-up z-0"></div>
-                        <img :src="img" alt="Miniatura" class="w-full h-full object-cover z-10 relative"
-                            @load="imagenesCargadas[index + 1] = true" />
-                    </div>
-                </div> -->
             </div>
             <div class="p-2">
                 <h1 class="text-2xl text-white font-bold animate__animated animate__fadeInDown animate__delay-0_2s">
                     <span>{{ descripcionActual }}</span> <br> <span>{{ productName
-                    }}</span>
+                        }}</span>
                 </h1>
                 <hr
                     class="my-4 border-[rgba(255,255,255,0.4)] animate__animated animate__fadeInDown animate__delay-0_4s" />
@@ -78,7 +67,7 @@
                             </div>
                         </template>
                         <li v-else class="text-white italic">No hay especificaciones disponibles.</li>
-                        <div class="flex justify-center md:justify-start items-center pt-6">
+                        <div class="flex justify-center md:justify-start items-center py-6">
                             <a v-if="producto?.pdfUrl" :href="producto.pdfUrl" download
                                 class="inline-flex cursor-pointer items-center gap-2 px-5 py-2.5 rounded-full bg-[#F8D146] text-[#0F0F0F] font-semibold md:text-sm text-xs uppercase tracking-wide shadow-md hover:bg-[#e7c230] transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
@@ -141,7 +130,7 @@ onMounted(async () => {
         producto.value = encontrado
         imagenesCargadas.value = encontrado.imagenes?.map(() => false) || []
     } else {
-        router.replace('/404')
+        router.replace('/not-found')
     }
 })
 
