@@ -8,7 +8,7 @@
             </div>
             <!-- Loader mientras carga -->
             <div v-if="loading"
-                class="bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center flex-1  flex items-center justify-center w-full h-full">
+                class="bg-[url('@/assets/image/Categoria.webp')] bg-cover bg-center flex-1  flex items-center justify-center w-full h-full">
                 <svg class="animate-spin h-12 w-12 text-[#F8D146]" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -17,7 +17,7 @@
                 </svg>
             </div>
             <div v-else
-                class="bg-[url('@/assets/image/Categoria.png')] bg-cover bg-center flex-1 p-2 overflow-x-hidden flex flex-col">
+                class="bg-[url('@/assets/image/Categoria.webp')] bg-cover bg-center flex-1 p-2 overflow-x-hidden flex flex-col">
                 <div class="grid grid-cols-12 gap-4">
                     <div v-for="(product, index) in productoStore.paginatedProducts" :key="index"
                         class="lg:col-span-4 col-span-6 cursor-pointer card-fade-up"
@@ -38,10 +38,11 @@
 </template>
 
 <script setup lang="ts">
+
 definePageMeta({
     layout: 'landing'
-})
-import { ref, onMounted } from 'vue';
+});
+import { ref, onMounted, computed, watch, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 import ProductCard from '@/components/ProductCard.vue';
 import Pagination from '@/components/Pagination.vue'
@@ -59,12 +60,14 @@ function goToProduct(product: string) {
 }
 
 onMounted(async () => {
-    loading.value = true
+    loading.value = true;
+
     if (productoStore.categoriaSeleccionada) {
         await productoStore.fetchProductos(productoStore.categoriaSeleccionada);
         allProducts.value = productoStore.productos;
     }
-    loading.value = false
+
+    loading.value = false;
 });
 
 watch(categoriaActual, async (nuevaCategoria) => {
