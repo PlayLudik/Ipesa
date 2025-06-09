@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-test('John Deere 310P T2', async ({ page }) => {
+test('John Deere 130P', async ({ page }) => {
   await page.goto('http://localhost:3000/home');
-  await expect(page.getByRole('heading', { name: 'Retroexcavadora' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Excavadora' })).toBeVisible();
 
   const imagen = page.getByRole('img', { name: 'Imagen del producto' }).nth(0);
   await expect(imagen).toBeVisible();
