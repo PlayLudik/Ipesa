@@ -73,3 +73,34 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+TESTING 
+Instalación
+Primero, instala las dependencias necesarias para Playwright:
+npm install -D @playwright/test
+npx playwright install
+Esto instalará Playwright junto con los navegadores necesarios. En nuestro caso, solo utilizaremos Google Chrome.
+
+
+Configuración para Chrome
+La configuración de Playwright está definida en playwright.config.ts. Solo se ejecutarán las pruebas en el navegador Chrome:
+// playwright.config.ts
+import { defineConfig } from '@playwright/test';
+
+export default defineConfig({
+   projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+  ],
+  testDir: './tests', // Ajustar si los tests están en otra ruta
+});
+
+
+Ejecutar pruebas
+▶ Ejecutar todos los tests:
+npx playwright test
+
+▶ Ejecutar un archivo de prueba específico:
+npx playwright test home/categorias.spec.ts

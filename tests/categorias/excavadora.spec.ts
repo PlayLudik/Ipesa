@@ -16,31 +16,36 @@ test.describe('Pruebas de productos Excavadora', () => {
   for (const { nombre, index, pagina } of productos) {
     test(nombre, async ({ page }) => {
       await page.goto('http://localhost:3000/home');
+      await page.waitForLoadState('networkidle');  
 
-      const icon = page.getByRole('img', { name: 'icon' }).nth(1);
-      await expect(icon).toBeVisible();
-      await icon.click();
+      const iconoCategoria = page.getByRole('img', { name: 'icon' }).nth(1);
+      await expect(iconoCategoria, 'Icono de categoría no visible').toBeVisible({ timeout: 10000 });
+      await iconoCategoria.click();
 
-      await expect(page.getByRole('heading', { name: 'Excavadora' })).toBeVisible();
+      const headingCategoria = page.getByRole('heading', { name: 'Excavadora', exact: true });
+      await expect(headingCategoria).toBeVisible({ timeout: 10000 });
 
       if (pagina === 2) {
         await page.getByText('2', { exact: true }).click();
         await expect(page).toHaveURL('http://localhost:3000/home');
-        await expect(page.getByRole('heading', { name: 'Excavadora' })).toBeVisible();
+        await expect(headingCategoria).toBeVisible({ timeout: 10000 });
       }
 
-      const imagenProducto = page.getByRole('img', { name: 'Imagen del producto' }).nth(index);
-      await expect(imagenProducto).toBeVisible();
-      await imagenProducto.click();
+      const imagen = page.getByRole('img', { name: 'Imagen del producto' , exact: true }).nth(index);
+      await expect(imagen, 'Imagen del producto no visible').toBeVisible({ timeout: 15000 });
+      await imagen.click();
 
       const nombreCodificado = encodeURIComponent(nombre);
       await expect(page).toHaveURL(`http://localhost:3000/product/${nombreCodificado}`);
-      await expect(page.getByRole('img', { name: 'Imagen principal' })).toBeVisible();
-      await expect(page.getByRole('heading', { level: 1, name: new RegExp(`John Deere[\\s\\S]*${nombre}`) })).toBeVisible();
-      await expect(page.getByRole('heading', { level: 2, name: 'Especificaciones' })).toBeVisible();
+
+      await expect(page.getByRole('img', { name: 'Imagen principal', exact: true }), 'Imagen principal no visible').toBeVisible({ timeout: 10000 });
+      
+      const titulo = new RegExp(`John Deere[\\s\\S]*${nombre}`);
+      await expect(page.getByRole('heading', { level: 1, name: titulo }),'Heading principal del producto no visible').toBeVisible({ timeout: 10000 });
+      await expect(page.getByRole('heading', { level: 2, name: 'Especificaciones' }),'Heading de Especificaciones no visible').toBeVisible({ timeout: 10000 });
 
       await page.getByText('Volver atrás').first().click();
-      await expect(page.getByRole('heading', { name: 'Excavadora' })).toBeVisible();
+      await expect(headingCategoria, 'No volvió a la vista de categoría').toBeVisible({ timeout: 10000 });
     });
   }
 });
