@@ -1,33 +1,35 @@
 [
 	{
 		"id": 1,
-		"nombre": "310P T2",
+		"nombre": "320P T2",
 		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
-			"potencia_neta_del_motor": "69 kW (91 hp) a 1,800 rpm",
-			"produndidad_máxima_de_excavación": "4.27 m (14 ft. 0 in.)",
-			"peso_operativo": "7357 kg (16,219 lb.)"
+			"potencia": "88 hp",
+			"peso_operativo": "7 757 Kg",
+			"capacidad_de_cucharón_retroexcavadora": "0.21 m³",
+			"capacidad_cucharón_cargadora": "1.00 m³"
 		},
 		"imagenes": [
-			"/images/productos/retroexcavadora/310P T2.webp",
-			"/images/productos/retroexcavadora/310P T2.webp"
+			"/images/productos/retroexcavadora/r4x001902_rrd.webp",
+			"/images/productos/retroexcavadora/r4x001902_rrd.webp"
 		],
 		"pdfUrl": "/pdfs/Retroexcavadora/FICHA TÉCNICA - 310P_compressed.pdf"
 	},
 	{
 		"id": 2,
-		"nombre": "310P T3",
+		"nombre": "320P T3",
 		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
-			"potencia_neta_del_motor": "69 kW (91 hp) a 1,800 rpm",
-			"produndidad_máxima_de_excavación": "4.27 m (14 ft. 0 in.)",
-			"peso_operativo": "7357 kg (16,219 lb.)"
+			"potencia": "92 hp",
+			"peso_operativo": "7 917 Kg",
+			"capacidad_de_cucharón_retroexcavadora": "0.21 m³",
+			"capacidad_cucharón_cargadora": "1.00 m³"
 		},
 		"imagenes": [
-			"/images/productos/retroexcavadora/310P T3.webp",
-			"/images/productos/retroexcavadora/310P T3.webp"
+			"/images/productos/retroexcavadora/r4x001902_rrd.webp",
+			"/images/productos/retroexcavadora/r4x001902_rrd.webp"
 		],
 		"pdfUrl": "/pdfs/Retroexcavadora/FICHA TÉCNICA - 310P_compressed.pdf"
 	},
@@ -37,9 +39,10 @@
 		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
-			"peso": "90 kg",
-			"fuerza_centrífuga": "18 kN",
-			"ancho_placa": "40 cm"
+			"potencia": "98 hp",
+			"peso_operativo": "7 850 Kg",
+			"capacidad_de_cucharón_retroexcavadora": "0.25 m³",
+			"capacidad_cucharón_cargadora": "1.00 m³"
 		},
 		"imagenes": [
 			"/images/productos/retroexcavadora/320p.webp",
@@ -53,9 +56,10 @@
 		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
-			"peso": "90 kg",
-			"fuerza_centrífuga": "18 kN",
-			"ancho_placa": "40 cm"
+			"potencia": "100 hp",
+			"peso_operativo": "7 850 Kg",
+			"capacidad_de_cucharón_retroexcavadora": "0.25 m³",
+			"capacidad_cucharón_cargadora": "1.00 m³"
 		},
 		"imagenes": [
 			"/images/productos/retroexcavadora/320p.webp",
@@ -63,53 +67,24 @@
 		],
 		"pdfUrl": "/pdfs/Retroexcavadora/FICHA TÉCNICA - 320P_compressed.pdf"
 	},
-	{
-		"id": 5,
-		"nombre": "130P",
-		"descripcion": "John Deere",
-		"categoria": "Excavadora",
-		"especificaciones": {
-			"potencia_neta": "69 kW (93 hp)",
-			"profundidad_de_excavación_máxima": "5.57 m (18 ft 3 in)",
-			"peso_operativo": "13 539-13 984 kg (29 822-30 802 lb)"
-		},
-		"imagenes": [
-			"/images/productos/excavadora/130P.webp",
-			"/images/productos/excavadora/130P.webp"
-		],
-		"pdfUrl": ""
-	},
-	{
-		"id": 6,
-		"nombre": "160P",
-		"descripcion": "John Deere",
-		"categoria": "Excavadora",
-		"especificaciones": {
-			"potencia_neta": "90 kW (121 hp)",
-			"profundidad_de_excavación_máxima": "5.98 m (19 ft 7 in)",
-			"peso_de_funcionamiento": "17 717 kg (39 024 lb)"
-		},
-		"imagenes": [
-			"/images/productos/excavadora/160P.webp",
-			"/images/productos/excavadora/160P.webp"
-		],
-		"pdfUrl": ""
-	},
+	
 	{
 		"id": 7,
 		"nombre": "200G",
 		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
-			"potencia_neta": "95 kw (130 hp)",
-			"profundidad_de_excavación_máxima": "6.57 m (21 ft 7 in)",
-			"peso_de_funcionamiento": "19 735 kg (43 469 lb)"
+			"potencia": "130 hp",
+			"peso_operativo": "20 205 Kg",
+			"logitud_de_brazo": "2.71 m",
+			"capacidad_de_cucharón": "1.00 m³",
+			"torque_de_giro": "51 kNm"
 		},
 		"imagenes": [
 			"/images/productos/excavadora/200G.webp",
 			"/images/productos/excavadora/200G.webp"
 		],
-		"pdfUrl": ""
+		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 200G_compressed.pdf"
 	},
 	{
 		"id": 8,
@@ -117,9 +92,11 @@
 		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
-			"potencia_neta": "119 kW (159 hp)",
-			"profundidad_de_excavación_máxima": "6,67 m (21 ft 11 in)",
-			"peso_de_funcionamiento": "23 560 kg (51 940 lb)"
+			"potencia": "159 hp",
+			"peso_operativo": "22 414 Kg",
+			"logitud_de_brazo": "2.91 m",
+			"capacidad_de_cucharón": "1.40 m³",
+			"torque_de_giro": "68 kNm"
 		},
 		"imagenes": [
 			"/images/productos/excavadora/210P.webp",
@@ -133,9 +110,11 @@
 		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
-			"potencia_neta": "140 kW (188 hp)",
-			"profundidad_de_excavación_máxima": "7,61 m (25 ft 0 in)",
-			"peso_de_funcionamiento": "27 500 kg (60 600 lb)"
+			"potencia": "177 hp",
+			"peso_operativo": "25 900 Kg",
+			"logitud_de_brazo": "2.50 m",
+			"capacidad_de_cucharón": "1.80 m³",
+			"torque_de_giro": "74.4 kNm"
 		},
 		"imagenes": [
 			"/images/productos/excavadora/250P.webp",
@@ -149,9 +128,11 @@
 		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
-			"potencia_neta": "202 kW (271 hp)",
-			"profundidad_de_excavación_máxima": "8,18 m (26 ft 10 in)",
-			"peso_de_funcionamiento": "36 734 kg (80 985 lb)"
+			"potencia": "271 hp",
+			"peso_operativo": "37 064 Kg",
+			"logitud_de_brazo": "2.66 m",
+			"capacidad_de_cucharón": "2.51 m³",
+			"torque_de_giro": "120 kNm"
 		},
 		"imagenes": [
 			"/images/productos/excavadora/350P.webp",
@@ -160,46 +141,16 @@
 		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 350 P_compressed.pdf"
 	},
 	{
-		"id": 10,
-		"nombre": "470G LC",
-		"descripcion": "John Deere",
-		"categoria": "Excavadora",
-		"especificaciones": {
-			"potencia_neta": "257 kW (345 hp)",
-			"profundidad_máx_de_excavación": "6,32 m (20 ft. 9 in.)",
-			"peso_operativo": "51 218 kg (112,916 lb.)"
-		},
-		"imagenes": [
-			"/images/productos/excavadora/470G LC.webp",
-			"/images/productos/excavadora/470G LC.webp"
-		],
-		"pdfUrl": ""
-	},
-	{
-		"id": 11,
-		"nombre": "670G LC",
-		"descripcion": "John Deere",
-		"categoria": "Excavadora",
-		"especificaciones": {
-			"potencia_neta": "345 kW (463 hp)",
-			"profundidad_máx_de_excavación": "9.15 m (30 ft. 0 in.)",
-			"peso_operativo": "69,900 kg (154,103 lb.)"
-		},
-		"imagenes": [
-			"/images/productos/excavadora/670G LC.webp",
-			"/images/productos/excavadora/670G LC.webp"
-		],
-		"pdfUrl": ""
-	},
-	{
 		"id": 12,
 		"nombre": "870G LC",
 		"descripcion": "John Deere",
 		"categoria": "Excavadora",
 		"especificaciones": {
-			"potencia_neta": "377 kW (506 hp)",
-			"profundidad_máx_de_excavación": "7,14 m (23 ft 5 in)",
-			"peso_operativo": "83 900 kg (184,968 lb.)"
+			"potencia": "560 hp",
+			"peso_operativo": "83 900 Kg",
+			"logitud_de_brazo": "2.95 m",
+			"capacidad_de_cucharón": "5.50 m³",
+			"torque_de_giro": "267 kNm"
 		},
 		"imagenes": [
 			"/images/productos/excavadora/870G LC.webp",
@@ -213,15 +164,16 @@
 		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
-			"potencia_neta": "92 kW (124 hp) at 2100 rpm",
-			"peso_operativo": "11 289-11 941 kg (24 887-26 325 lb)",
-			"capacidad_del_cucharón": "1,9-2,1 m3 (2,5-2,75 cu. yd.)"
+			"potencia": "130 hp",
+			"peso_operativo": "11 273 Kg",
+			"capacidad_de_cucharón": "1.90 m³",
+			"carga_de_vuelvo,_giro_máximo_40°": "7 395 Kg"
 		},
 		"imagenes": [
 			"/images/productos/cargador_frontal/444G.webp",
 			"/images/productos/cargador_frontal/444G.webp"
 		],
-		"pdfUrl": ""
+		"pdfUrl": "/pdfs/Cargador_Frontal/FICHA TÉCNICA - 444G.pdf"
 	},
 	{
 		"id": 14,
@@ -229,15 +181,16 @@
 		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
-			"potencia_neta": "141 kW (189 hp) a 1800 r. p. m.",
-			"peso_de_funcionamiento": "15 450 kg (34 060 lb)",
-			"capacidad_de_la_cuchara": "2,3–5,4 m³ (3,0–7,1 yd³)"
+			"potencia": "189 hp",
+			"peso_operativo": "15 614 Kg",
+			"capacidad_de_cucharón": "2.70 m³",
+			"carga_de_vuelvo,_giro_máximo_40°": "12 006 Kg"
 		},
 		"imagenes": [
 			"/images/productos/cargador_frontal/624P.webp",
 			"/images/productos/cargador_frontal/624P.webp"
 		],
-		"pdfUrl": ""
+		"pdfUrl": "/pdfs/Cargador_Frontal/FICHA TÉCNICA - 624P-comprimido.pdf"
 	},
 	{
 		"id": 15,
@@ -245,9 +198,10 @@
 		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
-			"potencia_neta": "185 kW (248 hp) a 1800 rpm",
-			"peso_en_orden_de_trabajo": "17 095–17 314 kg (37 688–38 170 lb.)",
-			"capacidad_del_cucharón": "3,10–3,25 m³ (4,00–4,25 yd³)"
+			"potencia": "248 hp",
+			"peso_operativo": "17 095 Kg",
+			"capacidad_de_cucharón": "3.30 m³",
+			"carga_de_vuelvo,_giro_máximo_40°": "11 898 Kg"
 		},
 		"imagenes": [
 			"/images/productos/cargador_frontal/644G.webp",
@@ -261,15 +215,16 @@
 		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
-			"potencia_neta": "167 kW (224 hp) a 1700 rpm",
-			"peso_de_funcionamiento": "18 283 kg (40 308 lb)",
-			"capacidad_de_la_cuchara": "2,5–3,7 m³ (3,2–4,9 yd³)"
+			"potencia": "224 hp",
+			"peso_operativo": "18 333 Kg",
+			"capacidad_de_cucharón": "3.30 m³",
+			"carga_de_vuelvo,_giro_máximo_40°": "12 879 Kg"
 		},
 		"imagenes": [
 			"/images/productos/cargador_frontal/644P.webp",
 			"/images/productos/cargador_frontal/644P.webp"
 		],
-		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 644P_compressed.pdf"
+		"pdfUrl": "/pdfs/Cargador_Frontal/FICHA TÉCNICA - 644P_compressed.pdf"
 	},
 	{
 		"id": 17,
@@ -277,15 +232,16 @@
 		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
-			"potencia_neta": "197 kW (264 hp) a 1800 rpm",
-			"peso_de_funcionamiento": "19 123 kg (42 159 lb)",
-			"capacidad_de_la_cuchara": "2,5–4,2 m³ (3,2–5,5 yd³)"
+			"potencia": "264 hp",
+			"peso_operativo": "19 392 Kg",
+			"capacidad_de_cucharón": "3.60 m³",
+			"carga_de_vuelvo,_giro_máximo_40°": "14 398 Kg"
 		},
 		"imagenes": [
 			"/images/productos/cargador_frontal/724P.webp",
 			"/images/productos/cargador_frontal/724P.webp"
 		],
-		"pdfUrl": ""
+		"pdfUrl": "/pdfs/Cargador_Frontal/FICHA TÉCNICA - 724P-comprimido.pdf"
 	},
 	{
 		"id": 18,
@@ -293,65 +249,16 @@
 		"descripcion": "John Deere",
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
-			"potencia_neta": "236 kW (316 hp) a 1500 rpm",
-			"peso_de_operativo": "24 907 a 26 630 kg (54 920 a 58 709 lb)",
-			"capacidad_del_cucharón": "3,8 a 4,5 m3 (5,0 a 5,85 yd3)"
+			"potencia": "316 hp",
+			"peso_operativo": "25 299 Kg",
+			"capacidad_de_cucharón": "4.20 m³",
+			"carga_de_vuelvo,_giro_máximo_40°": "15 909 Kg"
 		},
 		"imagenes": [
 			"/images/productos/cargador_frontal/744P.webp",
 			"/images/productos/cargador_frontal/744P.webp"
 		],
-		"pdfUrl": "/pdfs/Excavadora/FICHA TÉCNICA - 744p_compressed.pdf"
-	},
-	{
-		"id": 19,
-		"nombre": "844P",
-		"descripcion": "John Deere",
-		"categoria": "Cargador Frontal",
-		"especificaciones": {
-			"potencia_neta": "311 kW (417 hp) a 1400 rpm",
-			"peso_operativo": "32 439–33 851 kg (71,516–74,629 lb.)",
-			"capacidad_del_cucharón": "4,8-6,1 m3 (6,3 a 8,0 yd³)"
-		},
-		"imagenes": [
-			"/images/productos/cargador_frontal/844P.webp",
-			"/images/productos/cargador_frontal/844P.webp"
-		],
-		"pdfUrl": ""
-	},
-	{
-		"id": 20,
-		"nombre": "550J",
-		"descripcion": "John Deere",
-		"categoria": "Tractor de Orugas",
-		"especificaciones": {
-			"potencia_neta": "60–63 kW (80–85 hp) a 2200 rpm",
-			"distancia_sobre_el_suelo": "2184 mm (86 pulg.)",
-			"peso_operativo": "7718–8279 kg (17 016–18 252 lb)",
-			"rango_de_ancho_de_la_hoja": "2667–3150 mm (105–124 pulg.)"
-		},
-		"imagenes": [
-			"/images/productos/tractor_oruga/550J.webp",
-			"/images/productos/tractor_oruga/550J.webp"
-		],
-		"pdfUrl": ""
-	},
-	{
-		"id": 21,
-		"nombre": "650J",
-		"descripcion": "John Deere",
-		"categoria": "Tractor de Orugas",
-		"especificaciones": {
-			"potencia_neta": "74 kW (99 CV) a 2.200 rpm",
-			"distancia_sobre_el_suelo": "2210–2337 mm (87–92 pulgadas)",
-			"peso_operativo": "8419–8977 kg (18 560–19 750 lb)",
-			"rango_de_ancho_de_la_hoja": "2667–3150 mm (105–124 pulg.)"
-		},
-		"imagenes": [
-			"/images/productos/tractor_oruga/650J.webp",
-			"/images/productos/tractor_oruga/650J.webp"
-		],
-		"pdfUrl": ""
+		"pdfUrl": "/pdfs/Cargador_Frontal/FICHA TÉCNICA - 744p_compressed.pdf"
 	},
 	{
 		"id": 22,
@@ -359,16 +266,16 @@
 		"descripcion": "John Deere",
 		"categoria": "Tractor de Orugas",
 		"especificaciones": {
-			"potencia_neta_del_motor": "116 kW (155 hp) a 2,100 r/min",
-			"oruga_sobre_el_suelo": " 3,073 mm (121 in)",
-			"peso_operativo": "15,599 a 16,655 kg (de 34,395 lb a 36,725 lb)",
-			"rango_de_ancho_de_la_hoja": "3,295 a 3,962 mm (de 130 a 156 in)"
+			"potencia": "155 hp",
+			"peso_operativo": "18 086 Kg",
+			"capacidad_de_la_hoja_topadora": "4.30 m³",
+			"tracción_en_la_barra_de_tiro": "245 kN"
 		},
 		"imagenes": [
 			"/images/productos/tractor_oruga/750JII.webp",
 			"/images/productos/tractor_oruga/750JII.webp"
 		],
-		"pdfUrl": ""
+		"pdfUrl": "/pdfs/Tractor_Oruga/FICHA TÉCNICA - 750J-comprimido.pdf"
 	},
 	{
 		"id": 23,
@@ -376,10 +283,10 @@
 		"descripcion": "John Deere",
 		"categoria": "Tractor de Orugas",
 		"especificaciones": {
-			"potencia_neta_del_motor": "153 kW (205 HP) a 1,800 r/min",
-			"oruga_sobre_el_suelo": "2,769 a 3,284 mm (de 109 a 129 in)",
-			"peso_operativo": "18,219 a 20,146 kg(de 40,165 a 44,414 lb)",
-			"rango_de_ancho_de_la_hoja": "3,251 a 4,267 mm (de 128 a 168in)"
+			"potencia": "205 hp",
+			"peso_operativo": "20 714 Kg",
+			"capacidad_de_la_hoja_topadora": "5.57 m³",
+			"tracción_en_la_barra_de_tiro": "344 kN"
 		},
 		"imagenes": [
 			"/images/productos/tractor_oruga/850JII.webp",
@@ -393,15 +300,16 @@
 		"descripcion": "John Deere",
 		"categoria": "Tractor de Orugas",
 		"especificaciones": {
-			"potencia_neta": "264 kW (354 hp) at 1700 rpm",
-			"peso_de_funcionamiento": "42 640 a 42 900 kg (94 000 a 94 580 lb.)",
-			"cadena_sobre_el_suelo": "3419 mm (134.6 in.)"
+			"potencia": "354 hp",
+			"peso_operativo": "42 640 Kg",
+			"capacidad_de_la_hoja_topadora": "11.20 m³",
+			"tracción_en_la_barra_de_tiro": "570 kN"
 		},
 		"imagenes": [
 			"/images/productos/tractor_oruga/1050P.webp",
 			"/images/productos/tractor_oruga/1050P.webp"
 		],
-		"pdfUrl": ""
+		"pdfUrl": "/pdfs/Tractor_Oruga/FICHA TÉCNICA - 1050P-comprimido.pdf"
 	},
 	{
 		"id": 25,
@@ -409,48 +317,13 @@
 		"descripcion": "John Deere",
 		"categoria": "Motoniveladora",
 		"especificaciones": {
-			"potencia_neta": "150-200 HP (112-149 kW)",
-			"par_de_aprieta_máximo_neto": "675 lb-ft (915 Nm)",
-			"fuerza_de_tiro_de_la_hoja": "14 091 kg (31 066 lb)",
-			"reserva_de_par_de_apriete_negro": "37 %"
+			"potencia": "200 hp",
+			"peso_operativo": "17 535 Kg",
+			"fuerza_de_tiro_de_la_hoja": "14’’"
 		},
 		"imagenes": [
 			"/images/productos/motoniveladora/620P.webp",
 			"/images/productos/motoniveladora/620P.webp"
-		],
-		"pdfUrl": "/pdfs/Motoniveladora/FICHA TÉCNICA - 620P_compressed.pdf"
-	},
-	{
-		"id": 26,
-		"nombre": "670P",
-		"descripcion": "John Deere",
-		"categoria": "Motoniveladora",
-		"especificaciones": {
-			"potencia_neta": "180-230 HP (134-172 kW)",
-			"par_de_aprieta_máximo_neto": "882 lb-ft (1196 Nm)",
-			"fuerza_de_tiro_de_la_hoja": "15 501 kg (34 173 lb)",
-			"reserva_de_par_de_apriete_negro": "56 %"
-		},
-		"imagenes": [
-			"/images/productos/motoniveladora/670P.webp",
-			"/images/productos/motoniveladora/670P.webp"
-		],
-		"pdfUrl": "/pdfs/Motoniveladora/FICHA TÉCNICA - 620P_compressed.pdf"
-	},
-	{
-		"id": 27,
-		"nombre": "770P",
-		"descripcion": "John Deere",
-		"categoria": "Motoniveladora",
-		"especificaciones": {
-			"potencia_neta": "200-250 HP (149-187 kW)",
-			"par_de_aprieta_máximo_neto": "1288 Nm (950 lb-ft)",
-			"fuerza_de_tiro_de_la_hoja": "15 501 kg (34 173 lb)",
-			"reserva_de_par_de_apriete_negro": "55 %"
-		},
-		"imagenes": [
-			"/images/productos/motoniveladora/770P.webp",
-			"/images/productos/motoniveladora/770P.webp"
 		],
 		"pdfUrl": "/pdfs/Motoniveladora/FICHA TÉCNICA - 620P_compressed.pdf"
 	},
@@ -460,18 +333,15 @@
 		"descripcion": "HAMM",
 		"categoria": "Rodillos de Suelo",
 		"especificaciones": {
-			"motor": "Motor con la mejor potencia de su clase y un potente modo ECO",
-			"visión": "Excelente visión de la máquina y la obra",
-			"mantenimiento": "Fácil mantenimiento y revisión",
-			"funcionamiento": "Funcionamiento intuitivo y neutro en cuanto a idiomas",
-			"rendimiento": "Alto rendimiento de compactación",
-			"articulación": "Articulación de 3 puntos para una excelente tracción y capacidad todoterreno"
+			"potencia": "135 hp",
+			"peso_operativo": "11 765 Kg",
+			"cargas_líneas_estática": "29.7 Kg/cm"
 		},
 		"imagenes": [
 			"/images/productos/rodillos_de_suelo/HC110.webp",
 			"/images/productos/rodillos_de_suelo/HC110.webp"
 		],
-		"pdfUrl": "/pdfs/Rodillo_de_Suelo/HC_110.pdf"
+		"pdfUrl": "/pdfs/Rodillo_de_Suelo/o305790v83_HC_110_H311_Datasheet_esES.pdf"
 	},
 	{
 		"id": 29,
@@ -479,18 +349,15 @@
 		"descripcion": "HAMM",
 		"categoria": "Rodillos de Suelo",
 		"especificaciones": {
-			"motor": "Motor con la mejor potencia de su clase y un potente modo ECO",
-			"articulación": "Articulación de 3 puntos para una excelente tracción y capacidad todoterreno",
-			"alto_rendimiento": "Alto rendimiento de compactación",
-			"funcionamiento_intuitivo": "Funcionamiento intuitivo y neutro en cuanto a idiomas",
-			"mantenimiento": "Fácil mantenimiento y revisión",
-			"visión": "Excelente visión de la máquina y la obra"
+			"potencia": "135 hp",
+			"peso_operativo": "11 595 Kg",
+			"cargas_líneas_estática": "29.81 Kg/cm"
 		},
 		"imagenes": [
 			"/images/productos/rodillos_de_suelo/HC110G.webp",
 			"/images/productos/rodillos_de_suelo/HC110G.webp"
 		],
-		"pdfUrl": "/pdfs/Rodillo_de_Suelo/HC_110G_ES.pdf"
+		"pdfUrl": "/pdfs/Rodillo_de_Suelo/o324848v83_HC_110_H294_Datasheet_esES.pdf"
 	},
 	{
 		"id": 30,
@@ -498,17 +365,15 @@
 		"descripcion": "HAMM",
 		"categoria": "Rodillos de Suelo",
 		"especificaciones": {
-			"alto_rendimiento": "Alto rendimiento de compactación",
-			"digital_ready": "Digital Ready",
-			"configuración_personalizada": "Posibilidades de configuración personalizadas y una amplia gama de opciones",
-			"hammtronic": "Hammtronic para un gran confort, seguridad y reducción de emisiones",
-			"puesto_de_conducción": "Amplio puesto de conducción con el concepto de manejo Easy Drive"
+			"potencia": "204 hp",
+			"peso_operativo": "19 340 Kg",
+			"cargas_líneas_estática": "61.90 Kg/cm"
 		},
 		"imagenes": [
 			"/images/productos/rodillos_de_suelo/HC200.webp",
 			"/images/productos/rodillos_de_suelo/HC200.webp"
 		],
-		"pdfUrl": "/pdfs/Rodillo_de_Suelo/HC_200.pdf"
+		"pdfUrl": "/pdfs/Rodillo_de_Suelo/o200013v83_HC_200_H257_Datasheet_esES.pdf"
 	},
 	{
 		"id": 31,
@@ -516,16 +381,16 @@
 		"descripcion": "John Deere",
 		"categoria": "Minicargadores",
 		"especificaciones": {
-			"capacidad_de_operación_nominal": "994 kg (2,190 lb.)",
-			"potencia_bruta": "51,7 kW (69 CV) a 2.500 rpm",
-			"potencia_neta": "49,4 kW (66 CV) a 2.500 rpm",
-			"peso_operativo": "3246 kg (7.150 lb.)"
+			"potencia": "69 hp",
+			"motor_/_cilindrada": "Yanmar / 3.30L",
+			"capacidad_de_carga": "1 067 Kg",
+			"altura_de_levante": "3.10 m"
 		},
 		"imagenes": [
 			"/images/productos/minicargadores/320G.webp",
 			"/images/productos/minicargadores/320G.webp"
 		],
-		"pdfUrl": ""
+		"pdfUrl": "/pdfs/Minicargadores/320G - 04-07-25_compressed.pdf"
 	},
 	{
 		"id": 32,
@@ -533,32 +398,15 @@
 		"descripcion": "John Deere",
 		"categoria": "Minicargadores",
 		"especificaciones": {
-			"capacidad_de_operación_nominal": "1221 kg (2,690 lb.)",
-			"potencia_bruta": "55,0 kW (74 CV) a 2.500 rpm",
-			"potencia_neta": "52,7 kW (71 CV) a 2.500 rpm",
-			"peso_operativo": "3496 kg (7.700 lb.)"
+			"potencia": "74 hp",
+			"motor_/_cilindrada": "Yanmar / 3.30L",
+			"capacidad_de_carga": "1 294 Kg",
+			"altura_de_levante": "3.20 m"
 		},
 		"imagenes": [
 			"/images/productos/minicargadores/324G.webp",
 			"/images/productos/minicargadores/324G.webp"
 		],
-		"pdfUrl": ""
-	},
-	{
-		"id": 33,
-		"nombre": "325G",
-		"descripcion": "John Deere",
-		"categoria": "Minicargadores",
-		"especificaciones": {
-			"potencia_bruta": "54,8 kW (74 CV)",
-			"potencia_neta": "52,5 kW (70 CV)",
-			"capacidad_operativa_nominal": "1176 kg (2590 lb)",
-			"peso_operativo": "1176 kg (2590 lb)"
-		},
-		"imagenes": [
-			"/images/productos/minicargadores/325G.webp",
-			"/images/productos/minicargadores/325G.webp"
-		],
-		"pdfUrl": ""
+		"pdfUrl": "/pdfs/Minicargadores/324G - 04-07-25.pdf"
 	}
 ]
