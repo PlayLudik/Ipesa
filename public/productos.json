@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"nombre": "320P T2",
+		"nombre": "310P T2",
 		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
@@ -18,7 +18,7 @@
 	},
 	{
 		"id": 2,
-		"nombre": "320P T3",
+		"nombre": "310P T3",
 		"descripcion": "John Deere",
 		"categoria": "Retroexcavadora",
 		"especificaciones": {
