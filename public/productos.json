@@ -67,7 +67,7 @@
 		],
 		"pdfUrl": "/pdfs/Retroexcavadora/FICHA TÉCNICA - 320P_compressed.pdf"
 	},
-	
+
 	{
 		"id": 7,
 		"nombre": "200G",
@@ -199,7 +199,7 @@
 		"categoria": "Cargador Frontal",
 		"especificaciones": {
 			"potencia": "248 hp",
-			"peso_operativo": "17 095 Kg",
+			"peso_operativo": "17 314 Kg",
 			"capacidad_de_cucharón": "3.30 m³",
 			"carga_de_vuelvo,_giro_máximo_40°": "11 898 Kg"
 		},
@@ -335,7 +335,7 @@
 		"especificaciones": {
 			"potencia": "135 hp",
 			"peso_operativo": "11 765 Kg",
-			"cargas_líneas_estática": "29.7 Kg/cm"
+			"cargas_líneas_estática": "30.19 Kg/cm"
 		},
 		"imagenes": [
 			"/images/productos/rodillos_de_suelo/HC110.webp",
@@ -367,7 +367,7 @@
 		"especificaciones": {
 			"potencia": "204 hp",
 			"peso_operativo": "19 340 Kg",
-			"cargas_líneas_estática": "61.90 Kg/cm"
+			"cargas_líneas_estática": "62.41 Kg/cm"
 		},
 		"imagenes": [
 			"/images/productos/rodillos_de_suelo/HC200.webp",
